@@ -1,9 +1,10 @@
-package units.platforms;
+package units.doodles;
 
 import units.Unit;
 
-public class Platform extends Unit {
-    public Platform(double x, double y, String url, int velocityX, int velocityY) {
+public class Doodle extends Unit {
+
+    public Doodle(double x, double y, String url, int velocityX, int velocityY) {
         super(x, y, url, velocityX, velocityY);
     }
 

@@ -1,18 +1,25 @@
+import javafx.scene.Parent;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
-import java.io.File;
-
 public class GameSkin extends StackPane {
-    private static File backgroundURL = new File("./assets/images/bg-grid.png");
-    static final Image background = new Image(backgroundURL.toURI().toString());
-    private final ImageView imageView = new ImageView();
+    private final Image background = new Image(getClass().getResourceAsStream("./assets/images/grid.png"));
+    private final Pane root;
+    private final double maxWidth = 640.0;
+    private final double maxHeight = 1000.0;
 
-    public GameSkin() {
-        getStyleClass().add("background");
-        imageView.setImage(background);
-        getChildren().setAll(imageView);
-        setPrefSize(650, 650);
+    GameSkin(double screenWidth, double screenHeight) {
+        root = new Pane();
+        root.setPrefSize((screenWidth > maxWidth) ? maxWidth : screenWidth,
+                screenHeight > maxHeight ? maxHeight : screenHeight);
+        ImageView imageView = new ImageView();
+        imageView.setImage(this.background);
+        root.getChildren().add(imageView);
+    }
+
+    Parent getRoot() {
+        return root;
     }
 }
