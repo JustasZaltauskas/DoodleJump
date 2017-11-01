@@ -19,7 +19,8 @@ public abstract class Unit extends Pane{
         imageView.setViewport(new Rectangle2D(x, y,
                               image.getWidth(),
                               image.getHeight()));
-        getChildren().add(imageView);
+        getChildren().addAll(imageView);
+
     }
 
     public abstract void moveX(int value);

@@ -1,10 +1,10 @@
+import javafx.animation.AnimationTimer;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import units.Unit;
 import units.UnitFactory;
-import units.platforms.PlatformFactory;
 
 public class GameManager {
     private static GameManager gameManager;
@@ -13,7 +13,6 @@ public class GameManager {
     private double screenHeight = primaryScreenBounds.getMaxY();
     private GameSkin gameSkin = new GameSkin(screenWidth, screenHeight);
     private Scene scene = new Scene(this.gameSkin.getRoot());
-    private UnitFactory unitFactory;
 
     private GameManager() {
         this.newGame();
@@ -28,8 +27,19 @@ public class GameManager {
     }
 
     private void newGame() {
-        PlatformFactory platformFactory = UnitFactory.createFactory("platform");
-        Unit normalPlatform = platformFactory.createUnit("normal", 0, 10,0, 0);
+        UnitFactory platformFactory = UnitFactory.createFactory("platform");
+        UnitFactory doodleFactory = UnitFactory.createFactory("doodle");
+        Unit normalPlatform = platformFactory.createUnit("normal", 100, 100,0, 0);
+        Unit doodle = doodleFactory.createUnit("green", 100, 10000, 0, 5);
+        this.gameSkin.getRoot().getChildren().add(doodle.imageView);
+
+        AnimationTimer timer = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+//                update();
+            }
+        };
+        timer.start();
     }
 
     public Scene getScene() {

@@ -19,7 +19,7 @@ public class GameSkin extends StackPane {
         root.getChildren().add(imageView);
     }
 
-    Parent getRoot() {
+    Pane getRoot() {
         return root;
     }
 }

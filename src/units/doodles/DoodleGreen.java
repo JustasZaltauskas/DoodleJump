@@ -1,19 +1,9 @@
 package units.doodles;
 
-import units.Unit;
+public class DoodleGreen extends Doodle {
+    private  final  static String pGreenURL = "/assets/images/doodleL.png";
 
-
-public class DoodleGreen extends Unit {
-
-    DoodleGreen(double x, double y, String url, int velocityX, int velocityY) {
-       super(x, y, url, velocityX, velocityY);
-    }
-
-    @Override
-    public void moveX(int value) {
-    }
-
-    @Override
-    public void moveY(int value) {
+    public DoodleGreen(double x, double y, int velocityX, int velocityY) {
+        super(x, y, pGreenURL, velocityX, velocityY);
     }
 }
