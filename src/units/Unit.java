@@ -6,11 +6,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
-public abstract class Unit extends  Pane{
+public abstract class Unit extends Pane{
     public Image image;
     public ImageView imageView;
     public Point2D velocity;
 
+    public Unit() {}
     public Unit(double x, double y, String url, int velocityX, int velocityY) {
         setVelocity(velocityX, velocityY);
         setImage(url);
