@@ -17,5 +17,5 @@ public abstract class UnitFactory {
         }
     }
 
-    public abstract Unit createUnit(String unitType, double x, double y, double velocityX, double velocityY);
+    public abstract Unit createUnit(String unitType);
 }

@@ -11,20 +11,21 @@ public abstract class Unit extends Pane{
     public ImageView imageView;
     public Point2D velocity;
 
-    public Unit() {}
-    public Unit(double x, double y, String url, int velocityX, int velocityY) {
-        setVelocity(velocityX, velocityY);
+    public Unit(String url) {
         setImage(url);
         setImageView(image);
-        imageView.setViewport(new Rectangle2D(x, y,
-                              image.getWidth(),
-                              image.getHeight()));
-        getChildren().addAll(imageView);
-
+        imageView.setViewport(null);
     }
 
     public abstract void moveX(int value);
     public abstract void moveY(int value);
+
+    public void addGameUnit(Pane pane, double x, double y, int velocityX, int velocityY) {
+        getImageView().setTranslateX(x);
+        getImageView().setTranslateY(y);
+        setVelocity(velocityX, velocityY);
+        pane.getChildren().add(getImageView());
+    }
 
     public Image getImage() {
         return image;

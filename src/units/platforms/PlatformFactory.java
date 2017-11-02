@@ -7,9 +7,9 @@ public class PlatformFactory extends UnitFactory {
     public PlatformFactory(){}
 
     @Override
-    public Unit createUnit(String unitType, double x, double y, double velocityX, double velocityY) {
+    public Unit createUnit(String unitType) {
         if (unitType.equals("normal")) {
-            return new PlatformGreen(0, 0, 0, 0);
+            return new PlatformGreen();
         }
         return null;
     }

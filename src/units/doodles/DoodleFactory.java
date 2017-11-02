@@ -5,7 +5,7 @@ import units.UnitFactory;
 
 public class DoodleFactory extends UnitFactory{
     @Override
-    public Unit createUnit(String unitType, double x, double y, double velocityX, double velocityY) {
+    public Unit createUnit(String unitType) {
         if (unitType.equals("green")) {
             return new DoodleGreen(0, 0, 0, 0);
         }

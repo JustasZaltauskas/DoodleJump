@@ -29,10 +29,14 @@ public class GameManager {
     private void newGame() {
         UnitFactory platformFactory = UnitFactory.createFactory("platform");
         UnitFactory doodleFactory = UnitFactory.createFactory("doodle");
-        Unit normalPlatform = platformFactory.createUnit("normal", 100, 100,0, 0);
-        Unit doodle = doodleFactory.createUnit("green", 100, 10000, 0, 5);
-        this.gameSkin.getRoot().getChildren().add(doodle.imageView);
-
+        Unit normalPlatform = platformFactory.createUnit("normal");
+        Unit doodle = doodleFactory.createUnit("green");
+        doodle.addGameUnit(gameSkin.getRoot(),
+                           0,
+                           gameSkin.getRoot().getHeight(),
+                           0, 0);
+        System.out.println(gameSkin.getRoot().getLayoutX());
+        System.out.println(gameSkin.getRoot().getWidth());
         AnimationTimer timer = new AnimationTimer() {
             @Override
             public void handle(long now) {

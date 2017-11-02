@@ -3,8 +3,8 @@ package units.platforms;
 import units.Unit;
 
 public class Platform extends Unit {
-    public Platform(double x, double y, String url, int velocityX, int velocityY) {
-            super(x, y, url, velocityX, velocityY);
+    public Platform(String url) {
+            super(url);
         }
 
     @Override
