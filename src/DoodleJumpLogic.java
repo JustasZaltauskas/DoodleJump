@@ -1,7 +1,7 @@
 import units.doodles.Doodle;
 
 public class DoodleJumpLogic {
-    private GameLayout gameLayout;
+//    private GameLayout gameLayout;
     private Doodle doodler;
 
     //TODO

@@ -1,12 +1,12 @@
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-public class Player {
+public class Player implements IObserver{
     private static Player player;
-    private String name;
     private int score;
 
-    //TODO
-    private Player() {}
+    private Player() {
+        setScore(0);
+    }
 
     public static Player getInstance() {
         if (Player.player == null)
@@ -15,22 +15,12 @@ public class Player {
         return Player.player;
     }
 
-    public String getName() { return name; }
-
     public int getScore() { return score; }
-
-    public void setName(String name) { this.name = name; }
 
     public void setScore(int score) { this.score = score; }
 
-    //TODO
-    public void notify(DoodleJumpLogic doodleJumpLogic, String event) {
-        switch(event) {
-            case "DOODLER_JUMPED" :
-                System.out.println("Update score based on Doodler jump point!");
-            default:
-                throw new NotImplementedException();
-        }
+    @Override
+    public void updateObserver(int number) {
+        setScore(number);
     }
-
 }

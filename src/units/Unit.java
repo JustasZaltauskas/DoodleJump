@@ -5,24 +5,44 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 
 public abstract class Unit extends Pane{
-    public Image image;
-    public ImageView imageView;
-    public Point2D velocity;
+    private Image image;
+    private ImageView imageView;
+    private Point2D velocity;
+    private IMoveAlgorithm iMoveAlgorithm;
 
     public Unit(String url) {
         setImage(url);
         setImageView(image);
-        imageView.setViewport(null);
+        Rectangle2D viewport = new Rectangle2D(0, 0, image.getWidth(), image.getHeight());
+        imageView.setViewport(viewport);
     }
 
-    public abstract void moveX(int value);
-    public abstract void moveY(int value);
+    public void moveX(double x) {
+        getImageView().setTranslateX(getImageView().getTranslateX() - x);
+    };
+
+    public void moveY(double y) {
+        if (iMoveAlgorithm == null) {
+            getImageView().setTranslateY(getImageView().getTranslateY() - y);
+        } else {
+            iMoveAlgorithm.moveY(this, y);
+        }
+    }
+
+    public void setiMoveAlgorithm(IMoveAlgorithm iMoveAlgorithm) {
+        this.iMoveAlgorithm = iMoveAlgorithm;
+    }
+
+    public IMoveAlgorithm getiMoveAlgorithm() {
+        return iMoveAlgorithm;
+    }
 
     public void addGameUnit(Pane pane, double x, double y, int velocityX, int velocityY) {
-        getImageView().setTranslateX(x);
-        getImageView().setTranslateY(y);
+        getImageView().setLayoutX(x);
+        getImageView().setLayoutY(y);
         setVelocity(velocityX, velocityY);
         pane.getChildren().add(getImageView());
     }
@@ -54,4 +74,21 @@ public abstract class Unit extends Pane{
     public void setVelocity(int velocityX, int velocityY) {
         this.velocity = new Point2D(velocityX, velocityY);
     }
+
+    public double getViewPortWidth() {
+        return imageView.getViewport().getWidth();
+    }
+
+    public double getViewPortHeight() {
+        return imageView.getViewport().getHeight();
+    }
+
+    public boolean isColliding(Unit other) {
+        return getImageView().getBoundsInParent().intersects(other.getImageView().getBoundsInParent());
+    }
+
+    public boolean isBelowViewPort(StackPane stack) {
+        return Math.abs(stack.getTranslateY()) >= Math.abs(getImageView().getTranslateY());
+    }
+
 }

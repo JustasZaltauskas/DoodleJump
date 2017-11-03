@@ -1,7 +1,7 @@
 public class GameLogic {
     private static GameLogic gameLogic;
     private GameSkin gameSkin;
-    private GameLayout gameLayout;
+//    private GameLayout gameLayout;
     private DoodleJumpLogic doodleJumpLogic;
     private Player player;
 
@@ -16,7 +16,7 @@ public class GameLogic {
 
     public GameSkin getGameSkin() { return gameSkin; }
 
-    public GameLayout getGameLayout() { return gameLayout; }
+//    public GameLayout getGameLayout() { return gameLayout; }
 
     public Player getPlayer() { return player; }
 

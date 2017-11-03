@@ -1,4 +1,5 @@
+
 public interface IObserver {
 
-    void notify(DoodleJumpLogic doodleJumpLogic, String event);
+    void updateObserver(int number);
 }

@@ -12,7 +12,7 @@ public class Main extends Application {
         scene.getStylesheets().add("./assets/window.css");
         primaryStage.setTitle("Doodle Jump");
         primaryStage.setScene(scene);
-
+        primaryStage.setMaximized(true);
         primaryStage.show();
     }
 
