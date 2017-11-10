@@ -1,7 +1,13 @@
+/*
+* Unit class used for Abstract Factory pattern.
+* Description: .
+*
+* Author: Justas Žaltauskas
+ */
+
 package units;
 
 import javafx.geometry.Point2D;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -11,15 +17,24 @@ public abstract class Unit extends Pane{
     public ImageView imageView;
     public Point2D velocity;
 
+    /*
+    * Constructor creates unit out of url (image file)
+     */
     public Unit(String url) {
         setImage(url);
         setImageView(image);
         imageView.setViewport(null);
     }
 
+    /*
+    * Abstract movement methods
+     */
     public abstract void moveX(int value);
     public abstract void moveY(int value);
 
+    /*
+    * Adds new game unit to the screen (draws object)
+     */
     public void addGameUnit(Pane pane, double x, double y, int velocityX, int velocityY) {
         getImageView().setTranslateX(x);
         getImageView().setTranslateY(y);
@@ -31,24 +46,25 @@ public abstract class Unit extends Pane{
         return image;
     }
 
-    public void setImage(String imageURL) {
-        try {
-            this.image = new Image(getClass().getResourceAsStream(imageURL));
-        } catch (Exception e) {
-            throw e;
-        }
-    }
-
     public ImageView getImageView() {
         return imageView;
     }
 
-    public void setImageView(Image image) {
-        this.imageView = new ImageView(image);
-    }
-
     public Point2D getVelocity() {
         return velocity;
+    }
+
+    public void setImage(String imageURL) {
+        try {
+            this.image = new Image(getClass().getResourceAsStream(imageURL));
+        } catch (Exception e) {
+            System.out.println("No such image (" + imageURL + ") found!");
+            throw e;
+        }
+    }
+
+    public void setImageView(Image image) {
+        this.imageView = new ImageView(image);
     }
 
     public void setVelocity(int velocityX, int velocityY) {

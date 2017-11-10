@@ -1,8 +1,7 @@
-import units.doodles.Doodle;
+import units.doodlers.Doodler;
 
 public class DoodleJumpLogic {
-    private GameLayout gameLayout;
-    private Doodle doodler;
+    private Doodler doodler;
 
     //TODO
     public DoodleJumpLogic() { }

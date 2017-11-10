@@ -1,19 +1,18 @@
 /*
-* EnemyFactory class used for Abstract Factory pattern.
+* DoodlerFactory class used for Abstract Factory pattern.
 * Description: .
 *
-* Author: Justas Žaltauskas, Mantvydas Zakarevičius
+* Author: Justas Žaltauskas
  */
 
-package units.enemies;
+package units.doodlers;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import units.Unit;
 import units.UnitFactory;
-import units.doodlers.NormalDoodler;
 
-public class EnemyFactory extends UnitFactory {
-    public EnemyFactory() { }
+public class DoodlerFactory extends UnitFactory {
+    public DoodlerFactory() { }
 
     /*
     * Creates any doodler (determined by the passing parameter) and returns it to the caller
@@ -22,10 +21,10 @@ public class EnemyFactory extends UnitFactory {
     public Unit createUnit(String unitType) {
         switch (unitType) {
             case "normal":
-                System.out.println("Enemy (normal) unit has been created.");
-                return new NormalEnemy(0, 0, 0, 0);
+                System.out.println("Doodler (normal) unit has been created.");
+                return new NormalDoodler(0, 0, 0, 0);
             default:
-                System.out.println("No such enemy unit (" + unitType + ") exist!");
+                System.out.println("No such doodler unit (" + unitType + ") exist!");
                 throw new NotImplementedException();
         }
     }

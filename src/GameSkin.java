@@ -1,25 +1,41 @@
-import javafx.scene.Parent;
+/*
+* GameSkin class.
+* Description: .
+*
+* Author: Justas Žaltauskas, Mantvydas Zakarevičius
+ */
+
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
 public class GameSkin extends StackPane {
-    private final Image background = new Image(getClass().getResourceAsStream("./assets/images/grid.png"));
-    private final Pane root;
-    private final double maxWidth = 640.0;
-    private final double maxHeight = 1000.0;
+    private final double MAX_WIDTH = 600.0;
+    private final double MAX_HEIGHT = 800.0;
+    private final Image BACKGROUND = new Image(getClass().getResourceAsStream("./assets/images/grid.png"));
 
+    private final Pane pane;
+    private final ImageView imageView;
+
+    /*
+    * Constructor creates new gameskin (drawable space)
+     */
     GameSkin(double screenWidth, double screenHeight) {
-        root = new Pane();
-        root.setPrefSize((screenWidth > maxWidth) ? maxWidth : screenWidth,
-                screenHeight > maxHeight ? maxHeight : screenHeight);
-        ImageView imageView = new ImageView();
-        imageView.setImage(this.background);
-        root.getChildren().add(imageView);
+        // Creates new Pane and sets it size (layout size)
+        pane = new Pane();
+        pane.setPrefSize((screenWidth > MAX_WIDTH) ? MAX_WIDTH : screenWidth,
+                        screenHeight > MAX_HEIGHT ? MAX_HEIGHT : screenHeight);
+
+        // Creates new ImageView (and adds BACKGROUND to it)
+        imageView = new ImageView();
+        imageView.setImage(this.BACKGROUND);
+
+        // Adds imageView to root
+        pane.getChildren().add(imageView);
     }
 
-    Pane getRoot() {
-        return root;
+    Pane getPane() {
+        return pane;
     }
 }
