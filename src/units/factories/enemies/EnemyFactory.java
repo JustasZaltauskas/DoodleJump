@@ -5,12 +5,11 @@
 * Author: Justas Žaltauskas, Mantvydas Zakarevičius
  */
 
-package units.enemies;
+package units.factories.enemies;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-import units.Unit;
-import units.UnitFactory;
-import units.doodlers.NormalDoodler;
+import units.factories.Unit;
+import units.factories.UnitFactory;
 
 public class EnemyFactory extends UnitFactory {
     public EnemyFactory() { }

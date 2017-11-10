@@ -5,9 +5,9 @@
 * Author: Justas Žaltauskas
  */
 
-package units.platforms;
+package units.factories.platforms;
 
-import units.Unit;
+import units.factories.Unit;
 
 public class Platform extends Unit {
     /*

@@ -10,7 +10,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-    private static final double VERSION = 1.9;
+    private static final String VERSION = "1.10";
 
     /*
     * Starts the program and creates GameManager

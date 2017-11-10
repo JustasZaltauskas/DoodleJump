@@ -10,11 +10,14 @@ import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-import units.Unit;
-import units.UnitFactory;
+import units.factories.Unit;
+import units.factories.UnitFactory;
+import units.observer.Player;
+import units.observer.Subject;
 
 public class GameManager {
     private static GameManager gameManager;
+    private static Player player;
 
     private Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
     private double screenWidth = primaryScreenBounds.getMaxX();
@@ -22,12 +25,18 @@ public class GameManager {
     private GameSkin gameSkin;
     private Scene scene;
 
+    private Subject subject;
+
     /*
     * Constructor creates new game
      */
     private GameManager() {
         gameSkin = new GameSkin(screenWidth, screenHeight);
         scene = new Scene(this.gameSkin.getPane());
+
+        subject = new Subject();
+        player = Player.getInstance(subject);
+
         this.newGame();
     }
 
@@ -39,12 +48,16 @@ public class GameManager {
     }
 
     public Scene getScene() {
-        return this.scene;
+        return scene;
+    }
+
+    public Player getPlayer() {
+        return player;
     }
 
     /*
-    * Creates new game (creates and draws units used, starts game logic)
-     */
+        * Creates new game (creates and draws units used, starts game logic)
+         */
     private void newGame() {
         System.out.println("New game has been started...");
 
@@ -75,6 +88,15 @@ public class GameManager {
         // [DEBUGGING ONLY] Prints out parameters
 //        System.out.println(gameSkin.getPane().getLayoutX());
 //        System.out.println(gameSkin.getPane().getWidth());
+        System.out.println("Player name: " + player.getName());
+        System.out.println("Player score: " + player.getScore());
+
+        System.out.println("First state change: 11");
+        subject.setState(11);
+        System.out.println("Second state change: 99");
+        subject.setState(99);
+
+        System.out.println("Player score: " + player.getScore());
 
         //TODO Creates and starts animation timer
         AnimationTimer timer = new AnimationTimer() {
@@ -87,9 +109,10 @@ public class GameManager {
     }
 
     /**
-     *TODO Updates game every frame
+     * Updates game every frame
      */
     public void update() {
+        //TODO
         System.out.println("Game update (frame) not implemented yet!");
         throw new NotImplementedException();
     }

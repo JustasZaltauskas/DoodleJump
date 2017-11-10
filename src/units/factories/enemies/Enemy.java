@@ -1,19 +1,19 @@
 /*
-* Doodler class used for Abstract Factory pattern.
+* Enemy class used for Abstract Factory pattern.
 * Description: .
 *
-* Author: Justas Žaltauskas
+* Author: Justas Žaltauskas, Mantvydas Zakarevičius
  */
 
-package units.doodlers;
+package units.factories.enemies;
 
-import units.Unit;
+import units.factories.Unit;
 
-public class Doodler extends Unit {
+public class Enemy extends Unit {
     /*
     * Constructor creates unit out of url (image file)
      */
-    public Doodler(String url) {
+    public Enemy(String url) {
         super(url);
     }
 

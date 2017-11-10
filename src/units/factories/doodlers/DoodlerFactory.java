@@ -5,11 +5,11 @@
 * Author: Justas Žaltauskas
  */
 
-package units.doodlers;
+package units.factories.doodlers;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-import units.Unit;
-import units.UnitFactory;
+import units.factories.Unit;
+import units.factories.UnitFactory;
 
 public class DoodlerFactory extends UnitFactory {
     public DoodlerFactory() { }
