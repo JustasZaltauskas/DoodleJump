@@ -1,6 +1,6 @@
 /*
 * Platform class used for Abstract Factory pattern.
-* Description: .
+* Description: Main platform object which contains specific data to platforms in general.
 *
 * Author: Justas Žaltauskas
  */

@@ -1,6 +1,6 @@
 /*
 * Unit class used for Abstract Factory pattern.
-* Description: .
+* Description: Used by factories to create concrete objects (units).
 *
 * Author: Justas Žaltauskas
  */

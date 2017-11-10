@@ -1,6 +1,6 @@
 /*
 * Doodler class used for Abstract Factory pattern.
-* Description: .
+* Description: Main doodler object which contains specific data to doodlers in general.
 *
 * Author: Justas Žaltauskas
  */

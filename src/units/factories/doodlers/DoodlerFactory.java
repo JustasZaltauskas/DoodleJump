@@ -1,6 +1,6 @@
 /*
 * DoodlerFactory class used for Abstract Factory pattern.
-* Description: .
+* Description: Used to create specific doodlers.
 *
 * Author: Justas Žaltauskas
  */

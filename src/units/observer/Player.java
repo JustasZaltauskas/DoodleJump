@@ -1,9 +1,11 @@
-package units.observer;/*
+/*
 * Player class.
 * Description: Player information (updates score).
 *
 * Author: Mantvydas Zakarevičius
  */
+
+package units.observer;
 
 public class Player implements IObserver {
     private static Player player;

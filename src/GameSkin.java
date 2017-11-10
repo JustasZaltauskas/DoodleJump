@@ -1,6 +1,6 @@
 /*
 * GameSkin class.
-* Description: .
+* Description: Game layout settings.
 *
 * Author: Justas Žaltauskas, Mantvydas Zakarevičius
  */

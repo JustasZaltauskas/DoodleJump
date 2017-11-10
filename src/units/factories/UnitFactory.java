@@ -1,6 +1,6 @@
 /*
 * UnitFactory class used for Abstract Factory pattern.
-* Description: .
+* Description: Used to create defined factories.
 *
 * Author: Justas Žaltauskas
  */

@@ -1,9 +1,11 @@
-package units.observer;/*
+/*
 * Player class.
 * Description: Subject saves observers list.
 *
 * Author: Mantvydas Zakarevičius
  */
+
+package units.observer;
 
 import java.util.ArrayList;
 import java.util.List;

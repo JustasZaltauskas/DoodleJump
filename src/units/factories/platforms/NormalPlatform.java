@@ -1,6 +1,6 @@
 /*
 * NormalPlatform class used for Abstract Factory pattern.
-* Description: .
+* Description: Normal platform object that contains predefined data.
 *
 * Author: Justas Žaltauskas
  */

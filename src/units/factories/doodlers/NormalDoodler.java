@@ -1,6 +1,6 @@
 /*
 * NormalDoodler class used for Abstract Factory pattern.
-* Description: .
+* Description: Normal doodler object that contains predefined data.
 *
 * Author: Justas Žaltauskas
  */

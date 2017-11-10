@@ -1,6 +1,6 @@
 /*
 * PlatformFactory class used for Abstract Factory pattern.
-* Description: .
+* Description: Used to create specific platforms.
 *
 * Author: Justas Žaltauskas
  */

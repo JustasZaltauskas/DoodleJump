@@ -1,6 +1,6 @@
 /*
 * NormalEnemy class used for Abstract Factory pattern.
-* Description: .
+* Description: Normal enemy object that contains predefined data.
 *
 * Author: Justas Žaltauskas, Mantvydas Zakarevičius
  */

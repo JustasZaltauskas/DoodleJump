@@ -1,6 +1,6 @@
 /*
 * Enemy class used for Abstract Factory pattern.
-* Description: .
+* Description: Main enemy object which contains specific data to enemies in general.
 *
 * Author: Justas Žaltauskas, Mantvydas Zakarevičius
  */

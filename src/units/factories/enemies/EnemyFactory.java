@@ -1,6 +1,6 @@
 /*
 * EnemyFactory class used for Abstract Factory pattern.
-* Description: .
+* Description: Used to create specific enemies.
 *
 * Author: Justas Žaltauskas, Mantvydas Zakarevičius
  */

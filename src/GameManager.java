@@ -1,6 +1,6 @@
 /*
 * GameManager class.
-* Description: .
+* Description: Controls the whole game (includes game logic).
 *
 * Author: Justas Žaltauskas, Mantvydas Zakarevičius
  */

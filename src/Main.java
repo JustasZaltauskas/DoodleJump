@@ -1,6 +1,6 @@
 /*
 * Main class.
-* Description: .
+* Description: Starts (starting point) the program (game) with JavaFX method start().
 *
 * Author: Justas Žaltauskas, Mantvydas Zakarevičius
  */
