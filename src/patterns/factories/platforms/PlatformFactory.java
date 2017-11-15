@@ -5,11 +5,11 @@
 * Author: Justas Žaltauskas
  */
 
-package units.factories.platforms;
+package patterns.factories.platforms;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-import units.factories.Unit;
-import units.factories.UnitFactory;
+import patterns.factories.Unit;
+import patterns.factories.UnitFactory;
 
 public class PlatformFactory extends UnitFactory {
     public PlatformFactory() { }

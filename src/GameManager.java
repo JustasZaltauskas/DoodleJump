@@ -9,11 +9,15 @@ import javafx.animation.AnimationTimer;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.stage.Screen;
+import patterns.adapter.Jetpack;
+import patterns.adapter.JetpackAdapter;
+import patterns.adapter.MovementPowerUp;
+import patterns.adapter.PropellerHat;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-import units.factories.Unit;
-import units.factories.UnitFactory;
-import units.observer.Player;
-import units.observer.Subject;
+import patterns.factories.Unit;
+import patterns.factories.UnitFactory;
+import patterns.observer.Player;
+import patterns.observer.Subject;
 
 public class GameManager {
     private static GameManager gameManager;
@@ -56,10 +60,12 @@ public class GameManager {
     }
 
     /*
-        * Creates new game (creates and draws units used, starts game logic)
+        * Creates new game (creates and draws patterns used, starts game logic)
          */
     private void newGame() {
         System.out.println("New game has been started...");
+
+        // Abstract Factory pattern example
 
         // Creates factory objects
         UnitFactory doodleFactory = UnitFactory.createFactory("doodler");
@@ -85,9 +91,7 @@ public class GameManager {
                 gameSkin.getPane().getHeight(),
                 0, 0);
 
-        // [DEBUGGING ONLY] Prints out parameters
-//        System.out.println(gameSkin.getPane().getLayoutX());
-//        System.out.println(gameSkin.getPane().getWidth());
+        // Observer pattern example
         System.out.println("Player name: " + player.getName());
         System.out.println("Player score: " + player.getScore());
 
@@ -97,6 +101,22 @@ public class GameManager {
         subject.setState(99);
 
         System.out.println("Player score: " + player.getScore());
+
+        // Adapter pattern example
+
+        MovementPowerUp movementPowerUp = new MovementPowerUp(3);
+        PropellerHat propellerHat = new PropellerHat(3);
+        System.out.println("Speed limit? " + movementPowerUp.speedLimit(propellerHat));
+
+        Jetpack slow_jetpack = new Jetpack(3.3);
+        Jetpack fast_jetpack = new Jetpack(7.7);
+        // Won't compile incompatible types
+        //System.out.println("Speed limit? " + movementPowerUp.speedLimit(slow_jetpack));
+
+        JetpackAdapter slow_jetpack_adapter = new JetpackAdapter(slow_jetpack);
+        JetpackAdapter fast_jetpack_adapter = new JetpackAdapter(fast_jetpack);
+        System.out.println("Speed limit? " + movementPowerUp.speedLimit(slow_jetpack_adapter));
+        System.out.println("Speed limit? " + movementPowerUp.speedLimit(fast_jetpack_adapter));
 
         //TODO Creates and starts animation timer
         AnimationTimer timer = new AnimationTimer() {

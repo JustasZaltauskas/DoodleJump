@@ -5,7 +5,7 @@
 * Author: Justas Žaltauskas, Mantvydas Zakarevičius
  */
 
-package units.factories.enemies;
+package patterns.factories.enemies;
 
 public class NormalEnemy extends Enemy {
     private  final  static String normalEnemyURL = "/assets/images/monsters/bat1.png";

@@ -5,9 +5,9 @@
 * Author: Justas Žaltauskas
  */
 
-package units.factories.doodlers;
+package patterns.factories.doodlers;
 
-import units.factories.Unit;
+import patterns.factories.Unit;
 
 public class Doodler extends Unit {
     /*

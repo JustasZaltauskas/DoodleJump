@@ -5,7 +5,7 @@
 * Author: Justas Žaltauskas
  */
 
-package units.factories;
+package patterns.factories;
 
 import javafx.geometry.Point2D;
 import javafx.scene.image.Image;

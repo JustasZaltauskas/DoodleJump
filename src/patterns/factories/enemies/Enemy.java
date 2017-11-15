@@ -5,9 +5,9 @@
 * Author: Justas Žaltauskas, Mantvydas Zakarevičius
  */
 
-package units.factories.enemies;
+package patterns.factories.enemies;
 
-import units.factories.Unit;
+import patterns.factories.Unit;
 
 public class Enemy extends Unit {
     /*

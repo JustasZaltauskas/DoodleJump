@@ -5,7 +5,7 @@
 * Author: Justas Žaltauskas
  */
 
-package units.factories.platforms;
+package patterns.factories.platforms;
 
 public class NormalPlatform extends Platform {
     private  final  static String normalPlatformURL = "/assets/images/platforms/p-green.png";

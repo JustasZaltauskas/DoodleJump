@@ -5,7 +5,7 @@
 * Author: Mantvydas Zakarevičius
  */
 
-package units.observer;
+package patterns.observer;
 
 public class Player implements IObserver {
     private static Player player;

@@ -5,7 +5,7 @@
 * Author: Justas Žaltauskas
  */
 
-package units.factories.doodlers;
+package patterns.factories.doodlers;
 
 public class NormalDoodler extends Doodler {
     private  final  static String normalDoodlerURL = "/assets/images/doodleR.png";

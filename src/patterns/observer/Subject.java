@@ -5,7 +5,7 @@
 * Author: Mantvydas Zakarevičius
  */
 
-package units.observer;
+package patterns.observer;
 
 import java.util.ArrayList;
 import java.util.List;
