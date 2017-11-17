@@ -13,6 +13,7 @@ import patterns.adapter.Jetpack;
 import patterns.adapter.JetpackAdapter;
 import patterns.adapter.MovementPowerUp;
 import patterns.adapter.PropellerHat;
+import patterns.decorator.*;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import patterns.factories.Unit;
 import patterns.factories.UnitFactory;
@@ -131,6 +132,21 @@ public class GameManager {
 
         // Decorator pattern example
         System.out.println("----Decorator pattern example:----\n");
+
+        Spring spring = new Spring();
+        Trampoline trampoline = new Trampoline();
+        spring.getImageURL();
+        System.out.println("Spring push power: " + spring.getPushPower());
+        trampoline.getImageURL();
+        System.out.println("Trampoline push power: " + trampoline.getPushPower());
+
+        PlatformDecorator platformDecorator = new PlatformDecorator();
+        System.out.println("PlatformDecorator push power: " + platformDecorator.getPushPower());
+
+        SpringPlatform springPlatform = new SpringPlatform();
+        TrampolinePlatform trampolinePlatform = new TrampolinePlatform();
+        System.out.println("SpringPlatform push power: " + springPlatform.getPushPower());
+        System.out.println("TrampolinePlatform push power: " + trampolinePlatform.getPushPower());
 
         System.out.println("\n----Decorator pattern example:----\n");
 

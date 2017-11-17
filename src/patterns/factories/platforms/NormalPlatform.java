@@ -7,13 +7,26 @@
 
 package patterns.factories.platforms;
 
-public class NormalPlatform extends Platform {
+import patterns.decorator.IPlatform;
+
+public class NormalPlatform extends Platform implements IPlatform {
     private  final  static String normalPlatformURL = "/assets/images/platforms/p-green.png";
+    private double pushPower = 7.0;
 
     /*
     * Constructor creates object at location and velocity specified
      */
     public NormalPlatform(double x, double y, int velocityX, int velocityY) {
         super(normalPlatformURL);
+    }
+
+    @Override
+    public void getImageURL() {
+        System.out.println("Gets normal platform image: " + normalPlatformURL);
+    }
+
+    @Override
+    public double getPushPower() {
+        return pushPower;
     }
 }
