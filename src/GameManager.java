@@ -66,6 +66,8 @@ public class GameManager {
         System.out.println("New game has been started...");
 
         // Abstract Factory pattern example
+        System.out.println("\n----Abstract Factory pattern example:----\n");
+
 
         // Creates factory objects
         UnitFactory doodleFactory = UnitFactory.createFactory("doodler");
@@ -91,7 +93,11 @@ public class GameManager {
                 gameSkin.getPane().getHeight(),
                 0, 0);
 
+        System.out.println("\n----Abstract Factory pattern example:----\n");
+
         // Observer pattern example
+        System.out.println("----Observer pattern example:----\n");
+
         System.out.println("Player name: " + player.getName());
         System.out.println("Player score: " + player.getScore());
 
@@ -102,7 +108,10 @@ public class GameManager {
 
         System.out.println("Player score: " + player.getScore());
 
+        System.out.println("\n----Observer pattern example:----\n");
+
         // Adapter pattern example
+        System.out.println("----Adapter pattern example:----\n");
 
         MovementPowerUp movementPowerUp = new MovementPowerUp(3);
         PropellerHat propellerHat = new PropellerHat(3);
@@ -117,6 +126,13 @@ public class GameManager {
         JetpackAdapter fast_jetpack_adapter = new JetpackAdapter(fast_jetpack);
         System.out.println("Speed limit? " + movementPowerUp.speedLimit(slow_jetpack_adapter));
         System.out.println("Speed limit? " + movementPowerUp.speedLimit(fast_jetpack_adapter));
+
+        System.out.println("\n----Adapter pattern example:----\n");
+
+        // Decorator pattern example
+        System.out.println("----Decorator pattern example:----\n");
+
+        System.out.println("\n----Decorator pattern example:----\n");
 
         //TODO Creates and starts animation timer
         AnimationTimer timer = new AnimationTimer() {
