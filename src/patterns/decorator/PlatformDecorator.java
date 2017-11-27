@@ -15,6 +15,7 @@ public class PlatformDecorator implements IPlatform {
     private NormalPlatform normalPlatform = new NormalPlatform(0, 0, 0, 0);
     private double pushPower = spring.getPushPower() + normalPlatform.getPushPower();
 
+    @Override
     public void getImageURL() {
         System.out.println("Gets platform image URL.");
     }

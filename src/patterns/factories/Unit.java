@@ -12,7 +12,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
-public abstract class Unit extends Pane{
+public abstract class Unit extends Pane implements Cloneable {
     public Image image;
     public ImageView imageView;
     public Point2D velocity;
@@ -49,7 +49,6 @@ public abstract class Unit extends Pane{
     public ImageView getImageView() {
         return imageView;
     }
-
     public Point2D getVelocity() {
         return velocity;
     }
@@ -69,5 +68,14 @@ public abstract class Unit extends Pane{
 
     public void setVelocity(int velocityX, int velocityY) {
         this.velocity = new Point2D(velocityX, velocityY);
+    }
+
+    public Unit makeCopy() {
+        try {
+            return (Unit) this.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+            return this;
+        }
     }
 }

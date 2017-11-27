@@ -79,6 +79,7 @@ public class GameManager {
         Unit normalDoodler = doodleFactory.createUnit("normal");
         Unit normalPlatform = platformFactory.createUnit("normal");
         Unit normalEnemy = enemyFactory.createUnit("normal");
+        normalEnemy.makeCopy();
 
         // Draws objects onto the screen
         normalPlatform.addGameUnit(gameSkin.getPane(),
@@ -149,6 +150,13 @@ public class GameManager {
         System.out.println("TrampolinePlatform push power: " + trampolinePlatform.getPushPower());
 
         System.out.println("\n----Decorator pattern example:----\n");
+
+        // Prototype pattern example
+        System.out.println("----Prototype pattern example:----\n");
+
+        Unit normalEnemyClone = normalEnemy.makeCopy();
+
+        System.out.println("\n----Prototype pattern example:----\n");
 
         //TODO Creates and starts animation timer
         AnimationTimer timer = new AnimationTimer() {
