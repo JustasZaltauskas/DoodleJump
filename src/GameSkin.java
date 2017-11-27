@@ -7,7 +7,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
-public class GameSkin extends StackPane {
+public class GameSkin {
     private final Image background = new Image(getClass().getResourceAsStream("/assets/images/grid.png"));
     private final Pane root;
     private final GridPane grid;
@@ -43,7 +43,6 @@ public class GameSkin extends StackPane {
     public void moveStackY(double y) {
         getStack().setTranslateY(getStack().getTranslateY() + y);
     }
-
 
     public ImageView createImageView() {
         ImageView imageView = new ImageView();

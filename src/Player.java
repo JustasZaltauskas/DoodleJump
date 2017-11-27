@@ -2,7 +2,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class Player implements IObserver{
     private static Player player;
-    private int score;
+    private GameManager gameManager;
 
     private Player() {
         setScore(0);
@@ -15,9 +15,9 @@ public class Player implements IObserver{
         return Player.player;
     }
 
-    public int getScore() { return score; }
+    public int getScore() { return gameManager.getScore(); }
 
-    public void setScore(int score) { this.score = score; }
+    public void setScore(int score) { gameManager.setScore(); }
 
     @Override
     public void updateObserver(int number) {
