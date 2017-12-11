@@ -8,6 +8,7 @@
 package patterns.factories.doodlers;
 
 import patterns.factories.Unit;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class Doodler extends Unit {
     /*
@@ -18,6 +19,11 @@ public class Doodler extends Unit {
     }
 
     @Override
+    public boolean isMoving() {
+        return false;
+    }
+
+    @Override
     public void moveX(int value) {
 
     }
@@ -25,5 +31,10 @@ public class Doodler extends Unit {
     @Override
     public void moveY(int value) {
 
+    }
+
+    @Override
+    public void moveAlgorithm() {
+        throw new NotImplementedException();
     }
 }

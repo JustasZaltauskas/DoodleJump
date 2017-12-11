@@ -79,7 +79,6 @@ public class GameManager {
         Unit normalDoodler = doodleFactory.createUnit("normal");
         Unit normalPlatform = platformFactory.createUnit("normal");
         Unit normalEnemy = enemyFactory.createUnit("normal");
-        normalEnemy.makeCopy();
 
         // Draws objects onto the screen
         normalPlatform.addGameUnit(gameSkin.getPane(),

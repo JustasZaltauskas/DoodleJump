@@ -18,6 +18,11 @@ public class Platform extends Unit {
         }
 
     @Override
+    public boolean isMoving() {
+        return true;
+    }
+
+    @Override
     public void moveX(int value) {
 
     }
@@ -25,5 +30,10 @@ public class Platform extends Unit {
     @Override
     public void moveY(int value) {
 
+    }
+
+    @Override
+    public void moveAlgorithm() {
+        System.out.println("Template method pattern, Platform");
     }
 }

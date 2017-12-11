@@ -7,6 +7,7 @@
 
 package patterns.factories;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import javafx.geometry.Point2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,30 +17,34 @@ public abstract class Unit extends Pane implements Cloneable {
     public Image image;
     public ImageView imageView;
     public Point2D velocity;
-
     /*
     * Constructor creates unit out of url (image file)
      */
+
     public Unit(String url) {
         setImage(url);
         setImageView(image);
-        imageView.setViewport(null);
     }
-
     /*
     * Abstract movement methods
      */
+
     public abstract void moveX(int value);
     public abstract void moveY(int value);
+    public abstract boolean isMoving();
+    public abstract void moveAlgorithm();
 
     /*
     * Adds new game unit to the screen (draws object)
      */
     public void addGameUnit(Pane pane, double x, double y, int velocityX, int velocityY) {
-        getImageView().setTranslateX(x);
-        getImageView().setTranslateY(y);
+        setTranslate(x, y);
         setVelocity(velocityX, velocityY);
         pane.getChildren().add(getImageView());
+
+        if (isMoving()) {
+            moveAlgorithm();
+        }
     }
 
     public Image getImage() {
@@ -68,6 +73,11 @@ public abstract class Unit extends Pane implements Cloneable {
 
     public void setVelocity(int velocityX, int velocityY) {
         this.velocity = new Point2D(velocityX, velocityY);
+    }
+
+    public void setTranslate(double x, double y) {
+        getImageView().setTranslateX(x);
+        getImageView().setTranslateY(y);
     }
 
     public Unit makeCopy() {
