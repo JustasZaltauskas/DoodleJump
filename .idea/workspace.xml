@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Flyweight pattern">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/patterns/factories/enemies/BatEnemy.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/GameManager.java" afterPath="$PROJECT_DIR$/src/GameManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/patterns/factories/Unit.java" afterPath="$PROJECT_DIR$/src/patterns/factories/Unit.java" />
-      <change beforePath="$PROJECT_DIR$/src/patterns/factories/doodlers/Doodler.java" afterPath="$PROJECT_DIR$/src/patterns/factories/doodlers/Doodler.java" />
       <change beforePath="$PROJECT_DIR$/src/patterns/factories/enemies/Enemy.java" afterPath="$PROJECT_DIR$/src/patterns/factories/enemies/Enemy.java" />
-      <change beforePath="$PROJECT_DIR$/src/patterns/factories/platforms/Platform.java" afterPath="$PROJECT_DIR$/src/patterns/factories/platforms/Platform.java" />
+      <change beforePath="$PROJECT_DIR$/src/patterns/factories/enemies/EnemyFactory.java" afterPath="$PROJECT_DIR$/src/patterns/factories/enemies/EnemyFactory.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,12 +63,12 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Unit.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/patterns/factories/Unit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="132">
+              <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1282#1283#0" expanded="true" />
@@ -87,76 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UnitFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/patterns/factories/UnitFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Doodler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/patterns/factories/doodlers/Doodler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#529#530#0" expanded="true" />
-                <element signature="e#557#558#0" expanded="true" />
-                <element signature="e#771#772#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlatformFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/patterns/factories/platforms/PlatformFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="27" column="52" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Platform.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/patterns/factories/platforms/Platform.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="64" />
-              <folding>
-                <element signature="e#472#473#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#662#663#0" expanded="true" />
-                <element signature="e#733#734#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Enemy.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/patterns/factories/enemies/Enemy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="36" column="58" lean-forward="false" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
-              <folding>
-                <element signature="e#472#473#0" expanded="true" />
-                <element signature="e#499#500#0" expanded="true" />
-                <element signature="e#662#663#0" expanded="true" />
-                <element signature="e#730#731#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GameManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="137">
+              <caret line="81" column="39" lean-forward="false" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
               <folding>
                 <element signature="method#getInstance#0;class#GameManager#0" expanded="false" />
               </folding>
@@ -164,31 +98,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JetpackAdapter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/patterns/adapter/JetpackAdapter.java">
+      <file leaf-file-name="EnemyFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/patterns/factories/enemies/EnemyFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="144">
+              <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="11" />
+              <folding>
+                <element signature="e#520#534#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PropellerHat.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/patterns/adapter/PropellerHat.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovementPowerUp.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/patterns/adapter/MovementPowerUp.java">
+      <file leaf-file-name="BatEnemy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/patterns/factories/enemies/BatEnemy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -252,10 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/GameLayout.java" />
-        <option value="$PROJECT_DIR$/src/units/doodles/DoodleGreen.java" />
-        <option value="$PROJECT_DIR$/src/units/doodlers/Doodler.java" />
-        <option value="$PROJECT_DIR$/src/units/doodlers/NormalDoodler.java" />
         <option value="$PROJECT_DIR$/src/units/platforms/NormalPlatform.java" />
         <option value="$PROJECT_DIR$/src/units/doodlers/DoodlerFactory.java" />
         <option value="$PROJECT_DIR$/src/units/platforms/Platform.java" />
@@ -299,10 +221,14 @@
         <option value="$PROJECT_DIR$/src/patterns/factories/platforms/NormalPlatform.java" />
         <option value="$PROJECT_DIR$/src/patterns/decorator/PlatformDecorator.java" />
         <option value="$PROJECT_DIR$/src/patterns/factories/doodlers/Doodler.java" />
-        <option value="$PROJECT_DIR$/src/GameManager.java" />
         <option value="$PROJECT_DIR$/src/patterns/factories/Unit.java" />
         <option value="$PROJECT_DIR$/src/patterns/factories/platforms/Platform.java" />
+        <option value="$PROJECT_DIR$/src/patterns/factories/UnitFactory.java" />
         <option value="$PROJECT_DIR$/src/patterns/factories/enemies/Enemy.java" />
+        <option value="$PROJECT_DIR$/src/patterns/factories/enemies/NormalEnemy.java" />
+        <option value="$PROJECT_DIR$/src/GameManager.java" />
+        <option value="$PROJECT_DIR$/src/patterns/factories/enemies/BatEnemy.java" />
+        <option value="$PROJECT_DIR$/src/patterns/factories/enemies/EnemyFactory.java" />
       </list>
     </option>
   </component>
@@ -684,10 +610,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -719,7 +644,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="patterns" type="462c0819:PsiDirectoryNode" />
               <item name="factories" type="462c0819:PsiDirectoryNode" />
-              <item name="doodlers" type="462c0819:PsiDirectoryNode" />
+              <item name="enemies" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DoodleJump" type="b2602c69:ProjectViewProjectNode" />
@@ -727,12 +652,13 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="patterns" type="462c0819:PsiDirectoryNode" />
               <item name="factories" type="462c0819:PsiDirectoryNode" />
-              <item name="enemies" type="462c0819:PsiDirectoryNode" />
+              <item name="platforms" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -913,6 +839,8 @@
       <workItem from="1509049380062" duration="27929000" />
       <workItem from="1509557281142" duration="18579000" />
       <workItem from="1513019243280" duration="6812000" />
+      <workItem from="1513190655098" duration="1904000" />
+      <workItem from="1513197426369" duration="7939000" />
     </task>
     <task id="LOCAL-00001" summary="L1. Added classes (Singleton pattern): Player, GameLogic. Added pattern: Observer. Added required classes for these patterns.">
       <created>1509628818906</created>
@@ -953,7 +881,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71681000" />
+    <option name="totallyTimeSpent" value="81524000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -965,7 +893,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="-6" width="1920" height="1007" extended-state="6" />
+    <frame x="1920" y="-6" width="1922" height="1013" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -976,20 +904,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36301368" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32762557" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36301368" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32762557" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28441834" sideWeight="0.6703755" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14887941" sideWeight="0.6703755" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1001,6 +928,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1053,7 +981,8 @@
     <MESSAGE value="L1. Updated classes. Reorganized packages. Updated Observer Pattern." />
     <MESSAGE value="L2. Added adapter pattern." />
     <MESSAGE value="L2. Updated pattern printing." />
-    <option name="LAST_COMMIT_MESSAGE" value="L2. Updated pattern printing." />
+    <MESSAGE value="Flyweight pattern" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flyweight pattern" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1066,16 +995,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/assets/images/platforms/p-white.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/images/platforms/p-blue.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/images/bullet.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1169,8 +1088,6 @@
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/Object.java" />
     <entry file="file://$PROJECT_DIR$/src/DoodleJumpLogic.java" />
     <entry file="file://$PROJECT_DIR$/src/units/factories.java" />
-    <entry file="file://$PROJECT_DIR$/src/patterns/factories/enemies/EnemyFactory.java" />
-    <entry file="file://$PROJECT_DIR$/src/patterns/factories/enemies/NormalEnemy.java" />
     <entry file="file://$PROJECT_DIR$/DoodleJump.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1211,7 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-62">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1219,9 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#819#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1229,7 +1142,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1241,24 +1153,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameSkin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#1218#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/patterns/decorator/SpringPlatform.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#313#0" expanded="false" />
-            <element signature="method#SpringPlatform#0;class#SpringPlatform#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1277,12 +1175,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#325#0" expanded="false" />
-            <element signature="method#TrampolinePlatform#0;class#TrampolinePlatform#0" expanded="false" />
-            <element signature="e#289#290#0" expanded="false" />
-            <element signature="e#321#322#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1290,9 +1182,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#242#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1308,6 +1197,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/decorator/Spring.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#500#0" expanded="false" />
+            <element signature="method#Spring#0;class#Spring#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/adapter/Jetpack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1328,60 +1236,84 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/patterns/decorator/Spring.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#500#0" expanded="true" />
-            <element signature="method#Spring#0;class#Spring#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patterns/adapter/Jetpack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" column="27" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding>
-            <element signature="method#getInstance#0;class#GameManager#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/patterns/factories/doodlers/Doodler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
-          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+          <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#529#530#0" expanded="false" />
+            <element signature="e#557#558#0" expanded="false" />
+            <element signature="e#771#772#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/patterns/factories/UnitFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="32" column="42" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="42" />
+        <state relative-caret-position="270">
+          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameSkin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/factories/enemies/Enemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#472#473#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/factories/platforms/PlatformFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="27" column="52" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/factories/platforms/Platform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/monsters/bat1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/factories/enemies/NormalEnemy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="80" lean-forward="false" selection-start-line="10" selection-start-column="80" selection-end-line="10" selection-end-column="80" />
+          <folding>
+            <element signature="e#505#506#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/patterns/factories/Unit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="132">
+          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1282#1283#0" expanded="true" />
@@ -1398,36 +1330,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/patterns/factories/platforms/PlatformFactory.java">
+    <entry file="file://$PROJECT_DIR$/src/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="27" column="52" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patterns/factories/platforms/Platform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="64" />
+        <state relative-caret-position="137">
+          <caret line="81" column="39" lean-forward="false" selection-start-line="81" selection-start-column="39" selection-end-line="81" selection-end-column="39" />
           <folding>
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#733#734#0" expanded="true" />
+            <element signature="method#getInstance#0;class#GameManager#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/patterns/factories/enemies/Enemy.java">
+    <entry file="file://$PROJECT_DIR$/src/patterns/factories/enemies/BatEnemy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="36" column="58" lean-forward="false" selection-start-line="36" selection-start-column="58" selection-end-line="36" selection-end-column="58" />
+        <state relative-caret-position="72">
+          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/factories/enemies/EnemyFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="11" />
           <folding>
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#662#663#0" expanded="true" />
-            <element signature="e#730#731#0" expanded="true" />
+            <element signature="e#520#534#0" expanded="true" />
           </folding>
         </state>
       </provider>

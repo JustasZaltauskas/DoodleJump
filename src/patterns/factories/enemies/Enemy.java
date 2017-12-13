@@ -24,12 +24,10 @@ public class Enemy extends Unit {
 
     @Override
     public void moveX(int value) {
-
     }
 
     @Override
     public void moveY(int value) {
-
     }
 
     @Override
