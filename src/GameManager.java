@@ -189,7 +189,7 @@ public class GameManager {
      * Updates game every frame
      */
     public void update() {
-//        TODO
+        //TODO
         System.out.println("Game update (frame) not implemented yet!");
         throw new NotImplementedException();
     }

@@ -25,12 +25,12 @@ public class Doodler extends Unit {
 
     @Override
     public void moveX(double value) {
-        getImageView().setTranslateX(getImageView().getTranslateY() - value);
+        getImageView().setTranslateX(getImageView().getTranslateX() + value);
     }
 
     @Override
     public void moveY(double value) {
-        getImageView().setTranslateY(getImageView().getTranslateY() - value);
+        getImageView().setTranslateY(getImageView().getTranslateY() + value);
     }
 
     @Override

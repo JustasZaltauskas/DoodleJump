@@ -18,7 +18,7 @@ public abstract class Unit extends Pane implements Cloneable {
     public ImageView imageView;
     public Point2D velocity;
 
-    public static final double moveSpeed = 1;
+    public static final double moveSpeed = 5;
 
     /*
     * Constructor creates unit out of url (image file)
