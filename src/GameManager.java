@@ -14,11 +14,16 @@ import patterns.adapter.JetpackAdapter;
 import patterns.adapter.MovementPowerUp;
 import patterns.adapter.PropellerHat;
 import patterns.decorator.*;
+import patterns.factories.unitControl.*;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import patterns.factories.Unit;
 import patterns.factories.UnitFactory;
 import patterns.observer.Player;
 import patterns.observer.Subject;
+import javafx.scene.input.KeyEvent;
+import javafx.event.EventHandler;
+
+import java.util.Scanner;
 
 public class GameManager {
     private static GameManager gameManager;
@@ -29,6 +34,9 @@ public class GameManager {
     private double screenHeight = primaryScreenBounds.getMaxY();
     private GameSkin gameSkin;
     private Scene scene;
+    private Scanner scan;
+    private UnitControl controlChain;
+    private Unit normalDoodler;
 
     private Subject subject;
 
@@ -41,6 +49,9 @@ public class GameManager {
 
         subject = new Subject();
         player = Player.getInstance(subject);
+
+        scan = new Scanner(System.in);
+        controlChain = getUnitControlsChain();
 
         this.newGame();
     }
@@ -60,6 +71,19 @@ public class GameManager {
         return player;
     }
 
+    public UnitControl getUnitControlsChain() {
+        UnitControl left = new MoveLeft();
+        UnitControl right = new MoveRight();
+        UnitControl shoot = new Shoot();
+        UnitControl doNothing = new NullControl();
+
+        left.setMoveNext(right);
+        right.setMoveNext(shoot);
+        shoot.setMoveNext(doNothing);
+
+        return left;
+    }
+
     /*
         * Creates new game (creates and draws patterns used, starts game logic)
          */
@@ -76,7 +100,7 @@ public class GameManager {
         UnitFactory enemyFactory = UnitFactory.createFactory("enemy");
 
         // Creates objects from specific factories
-        Unit normalDoodler = doodleFactory.createUnit("normal");
+        normalDoodler = doodleFactory.createUnit("normal");
         Unit normalPlatform = platformFactory.createUnit("normal");
         Unit normalEnemy = enemyFactory.createUnit("normal");
         Unit batPlatform = enemyFactory.createUnit("bat");
@@ -158,13 +182,22 @@ public class GameManager {
 
         System.out.println("\n----Prototype pattern example:----\n");
 
-        //TODO Creates and starts animation timer
         AnimationTimer timer = new AnimationTimer() {
+            //TODO Creates and starts animation timer
             @Override
             public void handle(long now) {
-//                update();
+                update();
             }
         };
+
+        scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                System.out.println(keyEvent.getCode());
+                controlChain.move(normalDoodler, keyEvent.getCode());
+            }
+        });
         timer.start();
     }
 
@@ -172,8 +205,12 @@ public class GameManager {
      * Updates game every frame
      */
     public void update() {
-        //TODO
-        System.out.println("Game update (frame) not implemented yet!");
-        throw new NotImplementedException();
+//        TODO
+//        System.out.println("Game update (frame) not implemented yet!");
+//        throw new NotImplementedException();
+//        int keyCode = scan.nextInt();
+//        controlChain.move(normalDoodler, keyCode);
+//        System.out.println(keyCode);
     }
+
 }

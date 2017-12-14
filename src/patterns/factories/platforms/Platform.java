@@ -23,12 +23,12 @@ public class Platform extends Unit {
     }
 
     @Override
-    public void moveX(int value) {
+    public void moveX(double value) {
 
     }
 
     @Override
-    public void moveY(int value) {
+    public void moveY(double value) {
 
     }
 

@@ -26,7 +26,7 @@ import java.util.Hashtable;
 
         if (enemy == null) {
             if (unitType.equals("normal")) {
-                    enemy = new NormalEnemy(0, 0, 0, 0);
+                enemy = new NormalEnemy(0, 0, 0, 0);
             }
 
             if (unitType.equals("bat")) {

@@ -17,26 +17,29 @@ public abstract class Unit extends Pane implements Cloneable {
     public Image image;
     public ImageView imageView;
     public Point2D velocity;
+
+    public static final double moveSpeed = 1;
+
     /*
     * Constructor creates unit out of url (image file)
      */
-
     public Unit(String url) {
         setImage(url);
         setImageView(image);
     }
+
     /*
-    * Abstract movement methods
+    * Abstract unitControl methods
      */
 
-    public abstract void moveX(int value);
-    public abstract void moveY(int value);
+    public abstract void moveX(double value);
+    public abstract void moveY(double value);
     public abstract boolean isMoving();
     public abstract void moveAlgorithm();
-
     /*
     * Adds new game unit to the screen (draws object)
      */
+
     public void addGameUnit(Pane pane, double x, double y, int velocityX, int velocityY) {
         setTranslate(x, y);
         setVelocity(velocityX, velocityY);
@@ -45,6 +48,9 @@ public abstract class Unit extends Pane implements Cloneable {
         if (isMoving()) {
             moveAlgorithm();
         }
+    }
+    public static double getMoveSpeed() {
+        return moveSpeed;
     }
 
     public Image getImage() {
