@@ -3,8 +3,6 @@ package patterns.factories.unitControl;
 import javafx.scene.input.KeyCode;
 import patterns.factories.Unit;
 
-import java.awt.event.KeyEvent;
-
 import static javafx.scene.input.KeyCode.LEFT;
 
 public class MoveLeft implements UnitControl {

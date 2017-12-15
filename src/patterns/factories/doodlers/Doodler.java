@@ -10,7 +10,12 @@ package patterns.factories.doodlers;
 import patterns.factories.Unit;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.util.Arrays;
+import java.util.Stack;
+
 public class Doodler extends Unit {
+    private Stack<DoodleSave> saves = new Stack<DoodleSave>();
+
     /*
     * Constructor creates unit out of url (image file)
      */
@@ -36,5 +41,13 @@ public class Doodler extends Unit {
     @Override
     public void moveAlgorithm() {
         throw new NotImplementedException();
+    }
+
+    public void addSave(DoodleSave save) {
+        saves.push(save);
+    }
+
+    public DoodleSave getSave() {
+        return saves.pop();
     }
 }

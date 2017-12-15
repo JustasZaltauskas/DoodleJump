@@ -178,7 +178,6 @@ public class GameManager {
         };
 
         scene.setOnKeyPressed(keyEvent -> {
-            System.out.println(keyEvent.getCode());
             controlChain.move(normalDoodler, keyEvent.getCode());
         });
 
