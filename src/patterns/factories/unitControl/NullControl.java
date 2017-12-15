@@ -3,10 +3,6 @@ package patterns.factories.unitControl;
 import javafx.scene.input.KeyCode;
 import patterns.factories.Unit;
 
-import java.awt.event.KeyEvent;
-
-import static javafx.scene.input.KeyCode.RIGHT;
-
 public class NullControl implements UnitControl {
     UnitControl next;
 
@@ -16,6 +12,6 @@ public class NullControl implements UnitControl {
     }
 
     @Override
-    public void move(Unit unit, KeyCode keyCode) {
+    public void move(Unit unit, double velocity, KeyCode keyCode) {
     }
 }
