@@ -8,6 +8,7 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import patterns.observer.Subject;
 
 public class Main extends Application {
     private static final String VERSION = "1.10";
@@ -17,7 +18,9 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws Exception{
-        GameManager gameManager = GameManager.getInstance();
+        Subject subject = new Subject();
+        GameSkin gameSkin = new GameSkin();
+        GameManager gameManager = new GameManager(gameSkin, subject);
 
         Scene scene = gameManager.getScene();
         scene.getStylesheets().add("./assets/window.css");

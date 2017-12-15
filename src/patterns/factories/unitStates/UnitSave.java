@@ -1,9 +1,9 @@
-package patterns.factories.doodlers;
+package patterns.factories.unitStates;
 
-public class DoodleSave {
+public class UnitSave {
     private int[] save;
 
-    DoodleSave(int[] save) {
+    UnitSave(int[] save) {
         this.save = save;
     }
 

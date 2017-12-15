@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Add smooth player movement&#10;Encapsulate unit class memebers">
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/patterns/factories/unitStates/UnitOriginator.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/patterns/factories/unitStates/UnitSave.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/GameManager.java" afterPath="$PROJECT_DIR$/src/GameManager.java" />
+      <change beforePath="$PROJECT_DIR$/src/GameSkin.java" afterPath="$PROJECT_DIR$/src/GameSkin.java" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/patterns/factories/Unit.java" afterPath="$PROJECT_DIR$/src/patterns/factories/Unit.java" />
+      <change beforePath="$PROJECT_DIR$/src/patterns/factories/doodlers/DoodleOriginator.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/patterns/factories/doodlers/DoodleSave.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/patterns/factories/doodlers/Doodler.java" afterPath="$PROJECT_DIR$/src/patterns/factories/doodlers/Doodler.java" />
-      <change beforePath="$PROJECT_DIR$/src/patterns/factories/unitControl/MoveLeft.java" afterPath="$PROJECT_DIR$/src/patterns/factories/unitControl/MoveLeft.java" />
-      <change beforePath="$PROJECT_DIR$/src/patterns/factories/unitControl/MoveRight.java" afterPath="$PROJECT_DIR$/src/patterns/factories/unitControl/MoveRight.java" />
-      <change beforePath="$PROJECT_DIR$/src/patterns/factories/unitControl/NullControl.java" afterPath="$PROJECT_DIR$/src/patterns/factories/unitControl/NullControl.java" />
-      <change beforePath="$PROJECT_DIR$/src/patterns/factories/unitControl/Shoot.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/patterns/factories/unitControl/UnitControl.java" afterPath="$PROJECT_DIR$/src/patterns/factories/unitControl/UnitControl.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,138 +69,111 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="UnitOriginator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/patterns/factories/unitStates/UnitOriginator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+              <folding>
+                <element signature="e#131#132#0" expanded="true" />
+                <element signature="e#163#164#0" expanded="true" />
+                <element signature="e#193#194#0" expanded="true" />
+                <element signature="e#220#221#0" expanded="true" />
+                <element signature="e#261#262#0" expanded="true" />
+                <element signature="e#302#303#0" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#394#395#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnitSave.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/patterns/factories/unitStates/UnitSave.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding>
+                <element signature="e#114#115#0" expanded="true" />
+                <element signature="e#146#147#0" expanded="true" />
+                <element signature="e#176#177#0" expanded="true" />
+                <element signature="e#203#204#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Doodler.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/patterns/factories/doodlers/Doodler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
-              <folding>
-                <element signature="e#1066#1067#0" expanded="true" />
-                <element signature="e#1098#1099#0" expanded="true" />
-                <element signature="e#1133#1134#0" expanded="true" />
-                <element signature="e#1167#1168#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="504">
+              <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Unit.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/patterns/factories/Unit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="121" column="4" lean-forward="false" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1592#1593#0" expanded="true" />
-                <element signature="e#1620#1621#0" expanded="true" />
-                <element signature="e#1659#1660#0" expanded="true" />
-                <element signature="e#1691#1692#0" expanded="true" />
-                <element signature="e#1727#1728#0" expanded="true" />
-                <element signature="e#1758#1759#0" expanded="true" />
-                <element signature="e#2083#2084#0" expanded="true" />
-                <element signature="e#2136#2137#0" expanded="true" />
-                <element signature="e#2197#2198#0" expanded="true" />
-                <element signature="e#2262#2263#0" expanded="true" />
-                <element signature="e#2952#2953#0" expanded="true" />
-                <element signature="e#2976#2977#0" expanded="true" />
-                <element signature="e#3010#3011#0" expanded="true" />
-                <element signature="e#3036#3037#0" expanded="true" />
-                <element signature="e#3064#3065#0" expanded="true" />
-                <element signature="e#3088#3089#0" expanded="true" />
-                <element signature="e#3122#3123#0" expanded="true" />
-                <element signature="e#3148#3149#0" expanded="true" />
-                <element signature="e#3184#3185#0" expanded="true" />
-                <element signature="e#3216#3217#0" expanded="true" />
-                <element signature="e#3266#3267#0" expanded="true" />
-                <element signature="e#3308#3309#0" expanded="true" />
-                <element signature="e#3344#3345#0" expanded="true" />
-                <element signature="e#3376#3377#0" expanded="true" />
-                <element signature="e#3426#3427#0" expanded="true" />
-                <element signature="e#3468#3469#0" expanded="true" />
-                <element signature="e#3508#3509#0" expanded="true" />
-                <element signature="e#3544#3545#0" expanded="true" />
-                <element signature="e#3602#3603#0" expanded="true" />
-                <element signature="e#3652#3653#0" expanded="true" />
-                <element signature="e#3692#3693#0" expanded="true" />
-                <element signature="e#3728#3729#0" expanded="true" />
-                <element signature="e#3786#3787#0" expanded="true" />
-                <element signature="e#3836#3837#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameManager.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameManager.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="187" column="42" lean-forward="false" selection-start-line="187" selection-start-column="42" selection-end-line="187" selection-end-column="42" />
+            <state relative-caret-position="179">
+              <caret line="165" column="31" lean-forward="false" selection-start-line="165" selection-start-column="31" selection-end-line="165" selection-end-column="31" />
               <folding>
-                <element signature="method#GameManager#0;class#GameManager#0" expanded="false" />
-                <element signature="method#getInstance#0;class#GameManager#0" expanded="false" />
+                <element signature="e#0#7341#0" expanded="true" />
+                <element signature="e#1211#1212#0" expanded="true" />
+                <element signature="e#1239#1240#0" expanded="true" />
+                <element signature="method#getUnitControlsChain#0;class#GameManager#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoveRight.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/patterns/factories/unitControl/MoveRight.java">
+      <file leaf-file-name="Unit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/patterns/factories/Unit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MoveLeft.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/patterns/factories/unitControl/MoveLeft.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="251">
+              <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#287#288#0" expanded="true" />
-                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#1909#1910#0" expanded="true" />
+                <element signature="e#1937#1938#0" expanded="true" />
+                <element signature="e#1976#1977#0" expanded="true" />
+                <element signature="e#2008#2009#0" expanded="true" />
+                <element signature="e#2044#2045#0" expanded="true" />
+                <element signature="e#2075#2076#0" expanded="true" />
+                <element signature="e#2400#2401#0" expanded="true" />
+                <element signature="e#2453#2454#0" expanded="true" />
+                <element signature="e#2514#2515#0" expanded="true" />
+                <element signature="e#2579#2580#0" expanded="true" />
+                <element signature="e#3269#3270#0" expanded="true" />
+                <element signature="e#3293#3294#0" expanded="true" />
+                <element signature="e#3327#3328#0" expanded="true" />
+                <element signature="e#3353#3354#0" expanded="true" />
+                <element signature="e#3381#3382#0" expanded="true" />
+                <element signature="e#3405#3406#0" expanded="true" />
+                <element signature="e#3439#3440#0" expanded="true" />
+                <element signature="e#3465#3466#0" expanded="true" />
+                <element signature="e#3501#3502#0" expanded="true" />
+                <element signature="e#3533#3534#0" expanded="true" />
+                <element signature="e#3583#3584#0" expanded="true" />
+                <element signature="e#3625#3626#0" expanded="true" />
+                <element signature="e#3661#3662#0" expanded="true" />
+                <element signature="e#3693#3694#0" expanded="true" />
+                <element signature="e#3743#3744#0" expanded="true" />
+                <element signature="e#3785#3786#0" expanded="true" />
+                <element signature="e#3825#3826#0" expanded="true" />
+                <element signature="e#3861#3862#0" expanded="true" />
+                <element signature="e#3919#3920#0" expanded="true" />
+                <element signature="e#3969#3970#0" expanded="true" />
+                <element signature="e#4009#4010#0" expanded="true" />
+                <element signature="e#4045#4046#0" expanded="true" />
+                <element signature="e#4103#4104#0" expanded="true" />
+                <element signature="e#4153#4154#0" expanded="true" />
+                <element signature="e#4195#4196#0" expanded="true" />
+                <element signature="e#4227#4228#0" expanded="true" />
+                <element signature="e#4260#4261#0" expanded="true" />
+                <element signature="e#4294#4295#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NullControl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/patterns/factories/unitControl/NullControl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#242#243#0" expanded="true" />
-                <element signature="e#274#275#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UnitControl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/patterns/factories/unitControl/UnitControl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DoodlerFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/patterns/factories/doodlers/DoodlerFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -216,13 +190,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getScene</find>
-      <find>imageView</find>
-      <find>scene</find>
-      <find>gameSkin</find>
-      <find>se</find>
-      <find>imag</find>
-      <find>UNit</find>
       <find>normalEnemyClone</find>
       <find>Unit</find>
       <find>setViewport</find>
@@ -246,6 +213,13 @@
       <find>setTranslateX</find>
       <find>rele</find>
       <find>normalDO</find>
+      <find>GameSkin</find>
+      <find>getPan</find>
+      <find>width</find>
+      <find>height</find>
+      <find>gameSkin</find>
+      <find>gamemana</find>
+      <find>restoreUnitSave</find>
     </findStrings>
   </component>
   <component name="FindManager">
@@ -276,10 +250,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/IObserver.java" />
-        <option value="$PROJECT_DIR$/src/units/UnitFactory.java" />
         <option value="$PROJECT_DIR$/src/units/factories/observer/IObserver.java" />
-        <option value="$PROJECT_DIR$/src/GameSkin.java" />
         <option value="$PROJECT_DIR$/src/units/factories/UnitFactory.java" />
         <option value="$PROJECT_DIR$/src/units/factories/Unit.java" />
         <option value="$PROJECT_DIR$/src/units/factories/platforms/PlatformFactory.java" />
@@ -294,7 +265,6 @@
         <option value="$PROJECT_DIR$/src/units/observer/IObserver.java" />
         <option value="$PROJECT_DIR$/src/units/observer/Player.java" />
         <option value="$PROJECT_DIR$/src/units/observer/Subject.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/patterns/adapter/Jetpack.java" />
         <option value="$PROJECT_DIR$/src/patterns/adapter/MovementPowerUp.java" />
         <option value="$PROJECT_DIR$/src/patterns/adapter/JetpackAdapter.java" />
@@ -322,11 +292,15 @@
         <option value="$PROJECT_DIR$/src/patterns/factories/doodlers/DoodleSave.java" />
         <option value="$PROJECT_DIR$/src/patterns/factories/unitControl/NullControl.java" />
         <option value="$PROJECT_DIR$/src/patterns/factories/unitControl/UnitControl.java" />
-        <option value="$PROJECT_DIR$/src/patterns/factories/Unit.java" />
         <option value="$PROJECT_DIR$/src/patterns/factories/unitControl/MoveLeft.java" />
-        <option value="$PROJECT_DIR$/src/GameManager.java" />
         <option value="$PROJECT_DIR$/src/patterns/factories/unitControl/MoveRight.java" />
+        <option value="$PROJECT_DIR$/src/GameSkin.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/patterns/factories/doodlers/Doodler.java" />
+        <option value="$PROJECT_DIR$/src/patterns/factories/unitStates/UnitSave.java" />
+        <option value="$PROJECT_DIR$/src/patterns/factories/Unit.java" />
+        <option value="$PROJECT_DIR$/src/patterns/factories/unitStates/UnitOriginator.java" />
+        <option value="$PROJECT_DIR$/src/GameManager.java" />
       </list>
     </option>
   </component>
@@ -741,14 +715,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="patterns" type="462c0819:PsiDirectoryNode" />
               <item name="factories" type="462c0819:PsiDirectoryNode" />
-              <item name="doodlers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DoodleJump" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DoodleJump" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="patterns" type="462c0819:PsiDirectoryNode" />
-              <item name="factories" type="462c0819:PsiDirectoryNode" />
               <item name="unitControl" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -939,7 +905,7 @@
       <workItem from="1513019243280" duration="6812000" />
       <workItem from="1513190655098" duration="1904000" />
       <workItem from="1513197426369" duration="20797000" />
-      <workItem from="1513290591155" duration="14816000" />
+      <workItem from="1513290591155" duration="18540000" />
     </task>
     <task id="LOCAL-00001" summary="L1. Added classes (Singleton pattern): Player, GameLogic. Added pattern: Observer. Added required classes for these patterns.">
       <created>1509628818906</created>
@@ -983,11 +949,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513209086403</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add smooth player movement&#10;Encapsulate unit class memebers">
+      <created>1513330141611</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1513330141611</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109198000" />
+    <option name="totallyTimeSpent" value="112922000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -1000,22 +973,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="-6" width="1920" height="1007" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28310502" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28310502" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33561644" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36301368" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36301368" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28767124" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18943436" sideWeight="0.6703755" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18943436" sideWeight="0.6703755" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32762557" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1093,7 +1065,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="20" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1102,20 +1074,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/description.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1355,34 +1313,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/patterns/factories/doodlers/DoodleSave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#116#117#0" expanded="true" />
-            <element signature="e#148#149#0" expanded="true" />
-            <element signature="e#178#179#0" expanded="true" />
-            <element signature="e#205#206#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patterns/factories/doodlers/DoodleOriginator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="29" lean-forward="true" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <element signature="e#131#132#0" expanded="true" />
-            <element signature="e#163#164#0" expanded="true" />
-            <element signature="e#207#208#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/patterns/factories/unitControl/Shoot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -1395,30 +1325,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameSkin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/patterns/factories/doodlers/NormalDoodler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1453,16 +1359,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/patterns/factories/unitControl/UnitControl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/patterns/factories/unitControl/NullControl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -1475,70 +1371,160 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/patterns/factories/doodlers/Doodler.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="16" column="48" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
+        <state relative-caret-position="162">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/factories/unitControl/UnitControl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
-            <element signature="e#1066#1067#0" expanded="true" />
-            <element signature="e#1098#1099#0" expanded="true" />
-            <element signature="e#1133#1134#0" expanded="true" />
-            <element signature="e#1167#1168#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GameManager.java">
+    <entry file="file://$PROJECT_DIR$/src/GameSkin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="187" column="42" lean-forward="false" selection-start-line="187" selection-start-column="42" selection-end-line="187" selection-end-column="42" />
+        <state relative-caret-position="234">
+          <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
           <folding>
-            <element signature="method#GameManager#0;class#GameManager#0" expanded="false" />
-            <element signature="method#getInstance#0;class#GameManager#0" expanded="false" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#979#980#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1060#1061#0" expanded="true" />
+            <element signature="e#1088#1089#0" expanded="true" />
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1200#1201#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/factories/doodlers/DoodleSave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/factories/doodlers/DoodleOriginator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/factories/doodlers/NormalDoodler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/factories/doodlers/Doodler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="41" column="24" lean-forward="false" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/factories/unitStates/UnitSave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#114#115#0" expanded="true" />
+            <element signature="e#146#147#0" expanded="true" />
+            <element signature="e#176#177#0" expanded="true" />
+            <element signature="e#203#204#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/patterns/factories/Unit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="121" column="4" lean-forward="false" selection-start-line="121" selection-start-column="4" selection-end-line="121" selection-end-column="4" />
+        <state relative-caret-position="251">
+          <caret line="176" column="0" lean-forward="false" selection-start-line="176" selection-start-column="0" selection-end-line="176" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1592#1593#0" expanded="true" />
-            <element signature="e#1620#1621#0" expanded="true" />
-            <element signature="e#1659#1660#0" expanded="true" />
-            <element signature="e#1691#1692#0" expanded="true" />
-            <element signature="e#1727#1728#0" expanded="true" />
-            <element signature="e#1758#1759#0" expanded="true" />
-            <element signature="e#2083#2084#0" expanded="true" />
-            <element signature="e#2136#2137#0" expanded="true" />
-            <element signature="e#2197#2198#0" expanded="true" />
-            <element signature="e#2262#2263#0" expanded="true" />
-            <element signature="e#2952#2953#0" expanded="true" />
-            <element signature="e#2976#2977#0" expanded="true" />
-            <element signature="e#3010#3011#0" expanded="true" />
-            <element signature="e#3036#3037#0" expanded="true" />
-            <element signature="e#3064#3065#0" expanded="true" />
-            <element signature="e#3088#3089#0" expanded="true" />
-            <element signature="e#3122#3123#0" expanded="true" />
-            <element signature="e#3148#3149#0" expanded="true" />
-            <element signature="e#3184#3185#0" expanded="true" />
-            <element signature="e#3216#3217#0" expanded="true" />
-            <element signature="e#3266#3267#0" expanded="true" />
-            <element signature="e#3308#3309#0" expanded="true" />
-            <element signature="e#3344#3345#0" expanded="true" />
-            <element signature="e#3376#3377#0" expanded="true" />
-            <element signature="e#3426#3427#0" expanded="true" />
-            <element signature="e#3468#3469#0" expanded="true" />
-            <element signature="e#3508#3509#0" expanded="true" />
-            <element signature="e#3544#3545#0" expanded="true" />
-            <element signature="e#3602#3603#0" expanded="true" />
-            <element signature="e#3652#3653#0" expanded="true" />
-            <element signature="e#3692#3693#0" expanded="true" />
-            <element signature="e#3728#3729#0" expanded="true" />
-            <element signature="e#3786#3787#0" expanded="true" />
-            <element signature="e#3836#3837#0" expanded="true" />
+            <element signature="e#1909#1910#0" expanded="true" />
+            <element signature="e#1937#1938#0" expanded="true" />
+            <element signature="e#1976#1977#0" expanded="true" />
+            <element signature="e#2008#2009#0" expanded="true" />
+            <element signature="e#2044#2045#0" expanded="true" />
+            <element signature="e#2075#2076#0" expanded="true" />
+            <element signature="e#2400#2401#0" expanded="true" />
+            <element signature="e#2453#2454#0" expanded="true" />
+            <element signature="e#2514#2515#0" expanded="true" />
+            <element signature="e#2579#2580#0" expanded="true" />
+            <element signature="e#3269#3270#0" expanded="true" />
+            <element signature="e#3293#3294#0" expanded="true" />
+            <element signature="e#3327#3328#0" expanded="true" />
+            <element signature="e#3353#3354#0" expanded="true" />
+            <element signature="e#3381#3382#0" expanded="true" />
+            <element signature="e#3405#3406#0" expanded="true" />
+            <element signature="e#3439#3440#0" expanded="true" />
+            <element signature="e#3465#3466#0" expanded="true" />
+            <element signature="e#3501#3502#0" expanded="true" />
+            <element signature="e#3533#3534#0" expanded="true" />
+            <element signature="e#3583#3584#0" expanded="true" />
+            <element signature="e#3625#3626#0" expanded="true" />
+            <element signature="e#3661#3662#0" expanded="true" />
+            <element signature="e#3693#3694#0" expanded="true" />
+            <element signature="e#3743#3744#0" expanded="true" />
+            <element signature="e#3785#3786#0" expanded="true" />
+            <element signature="e#3825#3826#0" expanded="true" />
+            <element signature="e#3861#3862#0" expanded="true" />
+            <element signature="e#3919#3920#0" expanded="true" />
+            <element signature="e#3969#3970#0" expanded="true" />
+            <element signature="e#4009#4010#0" expanded="true" />
+            <element signature="e#4045#4046#0" expanded="true" />
+            <element signature="e#4103#4104#0" expanded="true" />
+            <element signature="e#4153#4154#0" expanded="true" />
+            <element signature="e#4195#4196#0" expanded="true" />
+            <element signature="e#4227#4228#0" expanded="true" />
+            <element signature="e#4260#4261#0" expanded="true" />
+            <element signature="e#4294#4295#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/patterns/factories/unitStates/UnitOriginator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding>
+            <element signature="e#131#132#0" expanded="true" />
+            <element signature="e#163#164#0" expanded="true" />
+            <element signature="e#193#194#0" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+            <element signature="e#261#262#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#394#395#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GameManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="165" column="31" lean-forward="false" selection-start-line="165" selection-start-column="31" selection-end-line="165" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#7341#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+            <element signature="e#1239#1240#0" expanded="true" />
+            <element signature="method#getUnitControlsChain#0;class#GameManager#0" expanded="false" />
           </folding>
         </state>
       </provider>

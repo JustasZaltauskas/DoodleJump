@@ -7,13 +7,18 @@
 
 package patterns.factories;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
 import javafx.geometry.Point2D;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import patterns.factories.unitStates.UnitSave;
+
+import java.util.Stack;
 
 public abstract class Unit extends Pane implements Cloneable {
+    private Stack<UnitSave> saves = new Stack<>();
+
     private Image image;
     private ImageView imageView;
     private Point2D velocity;
@@ -50,6 +55,12 @@ public abstract class Unit extends Pane implements Cloneable {
         this.velocityY = velocityY;
         this.velocityGoalX = 0;
         this.velocityGoalY = 0;
+
+        Rectangle2D viewport = new Rectangle2D(0, 0, image.getWidth(), image.getHeight());
+        getImageView().setViewport(viewport);
+        getImageView().setLayoutX(x);
+        getImageView().setLayoutY(y);
+
         pane.getChildren().add(getImageView());
 
         if (isMoving()) {
@@ -161,5 +172,13 @@ public abstract class Unit extends Pane implements Cloneable {
 
     public void setVelocityGoalY(double velocityGoalY) {
         this.velocityGoalY = velocityGoalY;
+    }
+
+    public void addSave(UnitSave save) {
+        saves.push(save);
+    }
+
+    public UnitSave getSave() {
+        return saves.pop();
     }
 }

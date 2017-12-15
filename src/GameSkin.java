@@ -5,37 +5,53 @@
 * Author: Justas Žaltauskas, Mantvydas Zakarevičius
  */
 
+import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
 public class GameSkin extends StackPane {
-    private final double MAX_WIDTH = 600.0;
-    private final double MAX_HEIGHT = 800.0;
-    private final Image BACKGROUND = new Image(getClass().getResourceAsStream("./assets/images/grid.png"));
+    private final Image background = new Image(getClass().getResourceAsStream("/assets/images/grid.png"));
+    private final Pane root;
+    private final GridPane grid;
+    private final StackPane stack;
+    private final double width = 500;
+    private final double height = 800;
 
-    private final Pane pane;
-    private final ImageView imageView;
-
-    /*
-    * Constructor creates new gameskin (drawable space)
-     */
-    GameSkin(double screenWidth, double screenHeight) {
-        // Creates new Pane and sets it size (layout size)
-        pane = new Pane();
-        pane.setPrefSize((screenWidth > MAX_WIDTH) ? MAX_WIDTH : screenWidth,
-                        screenHeight > MAX_HEIGHT ? MAX_HEIGHT : screenHeight);
-
-        // Creates new ImageView (and adds BACKGROUND to it)
-        imageView = new ImageView();
-        imageView.setImage(this.BACKGROUND);
-
-        // Adds imageView to root
-        pane.getChildren().add(imageView);
+    GameSkin() {
+        root = new Pane();
+        grid = new GridPane();
+        stack = new StackPane();
+        stack.setAlignment(Pos.CENTER);
+        grid.setAlignment(Pos.CENTER);
+        grid.addRow(0, createImageView());
+        stack.getChildren().addAll(grid, root);
     }
 
-    Pane getPane() {
-        return pane;
+    Pane getRoot() {
+        return root;
+    }
+
+    GridPane getGrid() {
+        return grid;
+    }
+
+    StackPane getStack() {
+        return stack;
+    }
+
+    public void moveStackY(double y) {
+        getStack().setTranslateY(getStack().getTranslateY() + y);
+    }
+
+    public ImageView createImageView() {
+        ImageView imageView = new ImageView();
+        imageView.setImage(this.background);
+        imageView.setFitHeight(height);
+        imageView.setFitWidth(width);
+
+        return imageView;
     }
 }

@@ -6,9 +6,7 @@
  */
 
 import javafx.animation.AnimationTimer;
-import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
-import javafx.stage.Screen;
 import patterns.adapter.Jetpack;
 import patterns.adapter.JetpackAdapter;
 import patterns.adapter.MovementPowerUp;
@@ -17,41 +15,30 @@ import patterns.decorator.*;
 import patterns.factories.unitControl.*;
 import patterns.factories.Unit;
 import patterns.factories.UnitFactory;
+import patterns.factories.unitStates.UnitOriginator;
+import patterns.factories.unitStates.UnitSave;
 import patterns.observer.Player;
 import patterns.observer.Subject;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+import java.util.Arrays;
 
 
 public class GameManager {
-    private static GameManager gameManager;
     private static Player player;
-
-    private Rectangle2D primaryScreenBounds = Screen.getPrimary().getVisualBounds();
-    private double screenWidth = primaryScreenBounds.getMaxX();
-    private double screenHeight = primaryScreenBounds.getMaxY();
-    private GameSkin gameSkin;
     private Scene scene;
     private Subject subject;
+    private GameSkin gameSkin;
     Unit normalDoodler;
 
     /*
     * Constructor creates new game
      */
-    private GameManager() {
-        gameSkin = new GameSkin(screenWidth, screenHeight);
-        scene = new Scene(this.gameSkin.getPane());
-
-        subject = new Subject();
-        player = Player.getInstance(subject);
-
+    public GameManager(GameSkin gameSkin, Subject subject) {
+        this.gameSkin = gameSkin;
+        this.subject = subject;
+        this.scene = new Scene(gameSkin.getStack());
+        this.player = Player.getInstance(subject);
         this.newGame();
-    }
-
-    public static GameManager getInstance() {
-        if (GameManager.gameManager == null)
-            GameManager.gameManager = new GameManager();
-
-        return GameManager.gameManager;
     }
 
     public Scene getScene() {
@@ -92,17 +79,17 @@ public class GameManager {
         Unit batPlatform = enemyFactory.createUnit("bat");
 
         // Draws objects onto the screen
-        normalPlatform.addGameUnit(gameSkin.getPane(),
-                0,
-                gameSkin.getPane().getHeight() + 60,
+        normalPlatform.addGameUnit(gameSkin.getRoot(),
+                100,
+                350,
                 0, 0);
-        normalDoodler.addGameUnit(gameSkin.getPane(),
-                            0,
-                            gameSkin.getPane().getHeight(),
-                            0, 0);
-        normalEnemy.addGameUnit(gameSkin.getPane(),
-                200,
-                gameSkin.getPane().getHeight(),
+        normalDoodler.addGameUnit(gameSkin.getRoot(),
+                100,
+                600,
+                0, 0);
+        normalEnemy.addGameUnit(gameSkin.getRoot(),
+                125,
+                100,
                 0, 0);
 
         System.out.println("\n----Abstract Factory pattern example:----\n");
@@ -162,26 +149,28 @@ public class GameManager {
         System.out.println("\n----Decorator pattern example:----\n");
 
         // Prototype pattern example
-        System.out.println("----Prototype pattern example:----\n");
 
         Unit normalEnemyClone = normalEnemy.makeCopy();
 
-        System.out.println("\n----Prototype pattern example:----\n");
+
+        System.out.println("----Memento pattern example:----\n");
+        UnitOriginator unitOriginator = new UnitOriginator();
+
+        int[] save = {0, 0};
+        unitOriginator.setSave(save);
+        System.out.println("Set save [0, 0]");
+        normalDoodler.addSave(unitOriginator.saveToUnitSaves());
+        unitOriginator.restoreUnitSave(normalDoodler.getSave());
+        int[] unitSave = unitOriginator.getSave();
+        System.out.println("Restored state: ");
+        System.out.println(Arrays.toString(unitSave));
+        System.out.println("----Memento pattern example:----\n");
 
         AnimationTimer timer = new AnimationTimer() {
             //TODO Creates and starts animation timer
-            long before = 0;
-            long nowBefore = 0;
-            long dt;
             @Override
             public void handle(long now) {
-                if (nowBefore != 0) {
-                    before = nowBefore;
-                }
-
-                nowBefore = now;
-                dt = now - before;
-                update(dt);
+                update();
             }
         };
 
@@ -199,19 +188,17 @@ public class GameManager {
     /**
      * Updates game every frame
      */
-    public void update(long dt) {
+    public void update() {
         normalDoodler.setVelocityX(normalDoodler.approach(
                                         normalDoodler.getVelocityGoalX(),
                                         normalDoodler.getVelocityX(),
                                         Unit.dt));
         normalDoodler.setVelocityY(normalDoodler.approach(
-                normalDoodler.getVelocityGoalY(),
-                normalDoodler.getVelocityY(),
-                Unit.dt));
+                                        normalDoodler.getVelocityGoalY(),
+                                        normalDoodler.getVelocityY(),
+                                        Unit.dt));
 
         normalDoodler.moveX(normalDoodler.getVelocityX());
         normalDoodler.moveY(normalDoodler.getVelocityY());
-
     }
-
 }
