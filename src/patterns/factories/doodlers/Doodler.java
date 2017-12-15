@@ -14,7 +14,7 @@ import java.util.Arrays;
 import java.util.Stack;
 
 public class Doodler extends Unit {
-    private Stack<DoodleSave> saves = new Stack<DoodleSave>();
+    private Stack<DoodleSave> saves = new Stack<>();
 
     /*
     * Constructor creates unit out of url (image file)
@@ -30,12 +30,14 @@ public class Doodler extends Unit {
 
     @Override
     public void moveX(double value) {
-        getImageView().setTranslateX(getImageView().getTranslateX() + value);
+        setX(getX() + value);
+        getImageView().setTranslateX(getX());
     }
 
     @Override
     public void moveY(double value) {
-        getImageView().setTranslateY(getImageView().getTranslateY() + value);
+        setY(value);
+        getImageView().setTranslateY(getY());
     }
 
     @Override

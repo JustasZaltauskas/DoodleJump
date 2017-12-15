@@ -14,11 +14,11 @@ public class MoveLeft implements UnitControl {
     }
 
     @Override
-    public void move(Unit unit, KeyCode keyCode) {
+    public void move(Unit unit, double velocity, KeyCode keyCode) {
         if (LEFT == keyCode) {
-            unit.moveX(-Unit.getMoveSpeed());
+            unit.setVelocityGoalX(-velocity);
         } else {
-            next.move(unit, keyCode);
+            next.move(unit, velocity, keyCode);
         }
     }
 }

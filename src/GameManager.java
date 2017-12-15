@@ -32,6 +32,7 @@ public class GameManager {
     private GameSkin gameSkin;
     private Scene scene;
     private Subject subject;
+    Unit normalDoodler;
 
     /*
     * Constructor creates new game
@@ -60,12 +61,10 @@ public class GameManager {
     public UnitControl getUnitControlsChain() {
         UnitControl left = new MoveLeft();
         UnitControl right = new MoveRight();
-        UnitControl shoot = new Shoot();
         UnitControl doNothing = new NullControl();
 
         left.setMoveNext(right);
-        right.setMoveNext(shoot);
-        shoot.setMoveNext(doNothing);
+        right.setMoveNext(doNothing);
 
         return left;
     }
@@ -87,7 +86,7 @@ public class GameManager {
         UnitControl controlChain = getUnitControlsChain();
 
         // Creates objects from specific factories
-        Unit normalDoodler = doodleFactory.createUnit("normal");
+        normalDoodler = doodleFactory.createUnit("normal");
         Unit normalPlatform = platformFactory.createUnit("normal");
         Unit normalEnemy = enemyFactory.createUnit("normal");
         Unit batPlatform = enemyFactory.createUnit("bat");
@@ -171,14 +170,27 @@ public class GameManager {
 
         AnimationTimer timer = new AnimationTimer() {
             //TODO Creates and starts animation timer
+            long before = 0;
+            long nowBefore = 0;
+            long dt;
             @Override
             public void handle(long now) {
-//                update();
+                if (nowBefore != 0) {
+                    before = nowBefore;
+                }
+
+                nowBefore = now;
+                dt = now - before;
+                update(dt);
             }
         };
 
         scene.setOnKeyPressed(keyEvent -> {
-            controlChain.move(normalDoodler, keyEvent.getCode());
+            controlChain.move(normalDoodler, 1.5, keyEvent.getCode());
+        });
+
+        scene.setOnKeyReleased(keyEvent -> {
+            controlChain.move(normalDoodler, 0, keyEvent.getCode());
         });
 
         timer.start();
@@ -187,10 +199,19 @@ public class GameManager {
     /**
      * Updates game every frame
      */
-    public void update() {
-        //TODO
-        System.out.println("Game update (frame) not implemented yet!");
-        throw new NotImplementedException();
+    public void update(long dt) {
+        normalDoodler.setVelocityX(normalDoodler.approach(
+                                        normalDoodler.getVelocityGoalX(),
+                                        normalDoodler.getVelocityX(),
+                                        Unit.dt));
+        normalDoodler.setVelocityY(normalDoodler.approach(
+                normalDoodler.getVelocityGoalY(),
+                normalDoodler.getVelocityY(),
+                Unit.dt));
+
+        normalDoodler.moveX(normalDoodler.getVelocityX());
+        normalDoodler.moveY(normalDoodler.getVelocityY());
+
     }
 
 }
