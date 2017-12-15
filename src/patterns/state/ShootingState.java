@@ -1,13 +1,18 @@
+/*
+* ShootingState class.
+* Description: Doodler shooting state class for state pattern.
+*
+* Author: Mantvydas Zakarevičius
+ */
+
 package patterns.state;
 
 import patterns.factories.doodlers.Doodler;
 
 public class ShootingState extends DoodlerState {
-
     public ShootingState(Doodler doodler) {
         super(doodler);
     }
-
 
     @Override
     public void onLock() {

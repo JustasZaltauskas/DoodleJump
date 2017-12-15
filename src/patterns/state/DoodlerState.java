@@ -5,7 +5,6 @@
 * Author: Mantvydas Zakarevičius
  */
 
-
 package patterns.state;
 
 import patterns.factories.doodlers.Doodler;
@@ -19,5 +18,4 @@ public abstract class DoodlerState {
 
     public abstract void onLock();
     public abstract void onShoot();
-
 }

@@ -1,9 +1,15 @@
+/*
+* LockedState class.
+* Description: Doodler locked state class for state pattern.
+*
+* Author: Mantvydas Zakarevičius
+ */
+
 package patterns.state;
 
 import patterns.factories.doodlers.Doodler;
 
 public class LockedState extends DoodlerState {
-
     public LockedState(Doodler doodler) {
         super(doodler);
     }
