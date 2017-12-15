@@ -12,6 +12,7 @@ import patterns.adapter.JetpackAdapter;
 import patterns.adapter.MovementPowerUp;
 import patterns.adapter.PropellerHat;
 import patterns.decorator.*;
+import patterns.factories.doodlers.Doodler;
 import patterns.factories.unitControl.*;
 import patterns.factories.Unit;
 import patterns.factories.UnitFactory;
@@ -21,6 +22,8 @@ import patterns.observer.Player;
 import patterns.observer.Subject;
 
 import java.util.Arrays;
+import patterns.state.ShootingState;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 
 public class GameManager {
@@ -165,6 +168,16 @@ public class GameManager {
         System.out.println("Restored state: ");
         System.out.println(Arrays.toString(unitSave));
         System.out.println("----Memento pattern example:----\n");
+
+        // State pattern example
+        System.out.println("----State pattern example:----\n");
+
+        ShootingState shootingState = new ShootingState((Doodler) normalDoodler);
+
+        shootingState.onShoot();
+        shootingState.onLock();
+
+        System.out.println("\n----State pattern example:----\n");
 
         AnimationTimer timer = new AnimationTimer() {
             //TODO Creates and starts animation timer
