@@ -20,6 +20,9 @@ import patterns.factories.unitControl.MoveRight;
 import patterns.factories.unitControl.NullControl;
 import patterns.factories.unitControl.UnitControl;
 import patterns.factories.unitStates.UnitOriginator;
+import patterns.mediator.Button;
+import patterns.mediator.Component;
+import patterns.mediator.EndGameWindow;
 import patterns.observer.Player;
 import patterns.observer.Subject;
 import patterns.state.ShootingState;
@@ -88,15 +91,15 @@ public class GameManager {
         Unit batPlatform = enemyFactory.createUnit("bat");
 
         // Draws objects onto the screen
-        normalPlatform.addGameUnit(gameSkin.getRoot(),
+        normalPlatform.addGameUnit(gameSkin.getPane(),
                 100,
                 350,
                 0, 0);
-        normalDoodler.addGameUnit(gameSkin.getRoot(),
+        normalDoodler.addGameUnit(gameSkin.getPane(),
                 100,
                 600,
                 0, 0);
-        normalEnemy.addGameUnit(gameSkin.getRoot(),
+        normalEnemy.addGameUnit(gameSkin.getPane(),
                 125,
                 100,
                 0, 0);
@@ -197,6 +200,16 @@ public class GameManager {
         System.out.println("Restored state: " + Arrays.toString(unitSave));
 
         System.out.println("\n----Memento pattern example:----\n");
+
+        // Mediator pattern example
+        System.out.println("----Mediator pattern example:----\n");
+
+        EndGameWindow endGameWindow = new EndGameWindow();
+
+        endGameWindow.notify(endGameWindow.getRestartGameButton(), "CLICK");
+        endGameWindow.notify(endGameWindow.getExitGameButton(), "PRESS");
+
+        System.out.println("\n----Mediator pattern example:----\n");
 
         AnimationTimer timer = new AnimationTimer() {
             //TODO Creates and starts animation timer

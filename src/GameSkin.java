@@ -13,25 +13,28 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 
 public class GameSkin extends StackPane {
-    private final Image background = new Image(getClass().getResourceAsStream("/assets/images/grid.png"));
-    private final Pane root;
+    private final double MAX_WIDTH = 500.0;
+    private final double MAX_HEIGHT = 800.0;
+    private final Image BACKGROUND = new Image(getClass().getResourceAsStream("./assets/images/grid.png"));
+    private final Pane pane;
     private final GridPane grid;
     private final StackPane stack;
-    private final double width = 500;
-    private final double height = 800;
 
+    /*
+    * Constructor creates new Gameskin (drawable space)
+     */
     public GameSkin() {
-        root = new Pane();
+        pane = new Pane();
         grid = new GridPane();
         stack = new StackPane();
         stack.setAlignment(Pos.CENTER);
         grid.setAlignment(Pos.CENTER);
         grid.addRow(0, createImageView());
-        stack.getChildren().addAll(grid, root);
+        stack.getChildren().addAll(grid, pane);
     }
 
-    public Pane getRoot() {
-        return root;
+    public Pane getPane() {
+        return pane;
     }
 
     public GridPane getGrid() {
@@ -48,9 +51,9 @@ public class GameSkin extends StackPane {
 
     public ImageView createImageView() {
         ImageView imageView = new ImageView();
-        imageView.setImage(this.background);
-        imageView.setFitHeight(height);
-        imageView.setFitWidth(width);
+        imageView.setImage(BACKGROUND);
+        imageView.setFitHeight(MAX_HEIGHT);
+        imageView.setFitWidth(MAX_WIDTH);
 
         return imageView;
     }

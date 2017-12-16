@@ -16,7 +16,9 @@ public abstract class UnitFactory {
     /*
     * Constructor
      */
-    public UnitFactory() { }
+    public UnitFactory() {
+
+    }
 
     /*
     * Abstract create method
