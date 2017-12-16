@@ -1,6 +1,6 @@
 /*
 * TrampolinePlatform class.
-* Description: .
+* Description: Uses Platform interface to add decorator pattern.
 *
 * Author: Mantvydas Zakarevičius
  */
@@ -11,6 +11,7 @@ public class TrampolinePlatform extends PlatformDecorator {
     private double pushPower = 25.0;
 
     public TrampolinePlatform() {
+
     }
 
     public double getPushPower() {

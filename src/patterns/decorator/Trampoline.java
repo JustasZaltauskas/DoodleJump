@@ -1,6 +1,6 @@
 /*
 * Trampoline class.
-* Description: .
+* Description: Uses Platform interface to add decorator pattern.
 *
 * Author: Mantvydas Zakarevičius
  */

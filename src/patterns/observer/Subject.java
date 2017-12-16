@@ -1,5 +1,5 @@
 /*
-* Player class.
+* Subject class.
 * Description: Subject saves observers list.
 *
 * Author: Mantvydas Zakarevičius

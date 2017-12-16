@@ -1,6 +1,6 @@
 /*
 * IPlatform interface.
-* Description: .
+* Description: Defines methods for decorator to use.
 *
 * Author: Mantvydas Zakarevičius
  */
@@ -12,6 +12,5 @@ public interface IPlatform {
     * Abstract observer methods
      */
     void getImageURL();
-
     double getPushPower();
 }

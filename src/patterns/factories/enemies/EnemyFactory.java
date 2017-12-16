@@ -18,7 +18,7 @@ import java.util.Hashtable;
     public static Hashtable<String, Unit> enemies = new Hashtable<String, Unit>();
 
     /*
-    * Creates any doodler (determined by the passing parameter) and returns it to the caller
+    * Creates any enemy (determined by the passing parameter) and returns it to the caller
      */
     @Override
     public Unit createUnit(String unitType) {
@@ -28,18 +28,15 @@ import java.util.Hashtable;
             if (unitType.equals("normal")) {
                 enemy = new NormalEnemy(0, 0, 0, 0);
             }
-
             if (unitType.equals("bat")) {
                 enemy = new BatEnemy(50, 50, 0, 0);
             }
-
             enemies.put(unitType, enemy);
+
             System.out.println("\n----Flyweight pattern:----");
             System.out.print(unitType + " enemy added to hashtable");
             System.out.println("\n----Flyweight pattern:----\n");
-
         }
-
         return enemy;
     }
 }

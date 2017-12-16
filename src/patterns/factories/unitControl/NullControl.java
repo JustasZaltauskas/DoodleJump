@@ -1,3 +1,10 @@
+/*
+* NullControl class used for Null Object pattern.
+* Description: Avoids null object usage.
+*
+* Author: Justas Žaltauskas
+ */
+
 package patterns.factories.unitControl;
 
 import javafx.scene.input.KeyCode;

@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 import patterns.observer.Subject;
 
 public class Main extends Application {
-    private static final String VERSION = "1.10";
+    private static final String VERSION = "1.11";
 
     /*
     * Starts the program and creates GameManager

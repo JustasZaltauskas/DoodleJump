@@ -1,6 +1,6 @@
 /*
 * GameManager class.
-* Description: Controls the whole game (includes game logic).
+* Description: Controls the whole game (includes game logic), main method for patterns demo.
 *
 * Author: Justas Žaltauskas, Mantvydas Zakarevičius
  */
@@ -12,18 +12,19 @@ import patterns.adapter.JetpackAdapter;
 import patterns.adapter.MovementPowerUp;
 import patterns.adapter.PropellerHat;
 import patterns.decorator.*;
-import patterns.factories.doodlers.Doodler;
-import patterns.factories.unitControl.*;
 import patterns.factories.Unit;
 import patterns.factories.UnitFactory;
+import patterns.factories.doodlers.Doodler;
+import patterns.factories.unitControl.MoveLeft;
+import patterns.factories.unitControl.MoveRight;
+import patterns.factories.unitControl.NullControl;
+import patterns.factories.unitControl.UnitControl;
 import patterns.factories.unitStates.UnitOriginator;
-import patterns.factories.unitStates.UnitSave;
 import patterns.observer.Player;
 import patterns.observer.Subject;
+import patterns.state.ShootingState;
 
 import java.util.Arrays;
-import patterns.state.ShootingState;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 
 public class GameManager {
@@ -31,10 +32,10 @@ public class GameManager {
     private Scene scene;
     private Subject subject;
     private GameSkin gameSkin;
-    Unit normalDoodler;
+    private Unit normalDoodler;
 
     /*
-    * Constructor creates new game
+    * Constructor creates new game objects and starts new game
      */
     public GameManager(GameSkin gameSkin, Subject subject) {
         this.gameSkin = gameSkin;
@@ -44,10 +45,16 @@ public class GameManager {
         this.newGame();
     }
 
+    /*
+    * Get Scene object
+     */
     public Scene getScene() {
         return scene;
     }
 
+    /*
+    * Get UnitControl Chain object
+     */
     public UnitControl getUnitControlsChain() {
         UnitControl left = new MoveLeft();
         UnitControl right = new MoveRight();
@@ -60,14 +67,13 @@ public class GameManager {
     }
 
     /*
-        * Creates new game (creates and draws patterns used, starts game logic)
-         */
+    * Creates new game (creates and draws patterns used, starts game logic)
+     */
     private void newGame() {
         System.out.println("New game has been started...");
 
         // Abstract Factory pattern example
         System.out.println("\n----Abstract Factory pattern example:----\n");
-
 
         // Creates factory objects
         UnitFactory doodleFactory = UnitFactory.createFactory("doodler");
@@ -152,22 +158,11 @@ public class GameManager {
         System.out.println("\n----Decorator pattern example:----\n");
 
         // Prototype pattern example
+        System.out.println("----Decorator pattern example:----\n");
 
         Unit normalEnemyClone = normalEnemy.makeCopy();
 
-
-        System.out.println("----Memento pattern example:----\n");
-        UnitOriginator unitOriginator = new UnitOriginator();
-
-        int[] save = {0, 0};
-        unitOriginator.setSave(save);
-        System.out.println("Set save [0, 0]");
-        normalDoodler.addSave(unitOriginator.saveToUnitSaves());
-        unitOriginator.restoreUnitSave(normalDoodler.getSave());
-        int[] unitSave = unitOriginator.getSave();
-        System.out.println("Restored state: ");
-        System.out.println(Arrays.toString(unitSave));
-        System.out.println("----Memento pattern example:----\n");
+        System.out.println("\n----Decorator pattern example:----\n");
 
         // State pattern example
         System.out.println("----State pattern example:----\n");
@@ -178,6 +173,22 @@ public class GameManager {
         shootingState.onLock();
 
         System.out.println("\n----State pattern example:----\n");
+
+        // Memento pattern example
+        System.out.println("----Memento pattern example:----\n");
+        
+        UnitOriginator unitOriginator = new UnitOriginator();
+        int[] save = {0, 0};
+        unitOriginator.setSave(save);
+        System.out.println("Set save [0, 0]");
+
+        normalDoodler.addSave(unitOriginator.saveToUnitSaves());
+        unitOriginator.restoreUnitSave(normalDoodler.getSave());
+        int[] unitSave = unitOriginator.getSave();
+        System.out.println("Restored state: ");
+        System.out.println(Arrays.toString(unitSave));
+
+        System.out.println("----Memento pattern example:----\n");
 
         AnimationTimer timer = new AnimationTimer() {
             //TODO Creates and starts animation timer

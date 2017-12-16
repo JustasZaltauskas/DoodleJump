@@ -12,7 +12,9 @@ import patterns.factories.Unit;
 import patterns.factories.UnitFactory;
 
 public class PlatformFactory extends UnitFactory {
-    public PlatformFactory() { }
+    public PlatformFactory() {
+
+    }
 
     /*
     * Creates any platform (determined by the passing parameter) and returns it to the caller

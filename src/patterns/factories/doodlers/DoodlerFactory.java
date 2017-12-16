@@ -12,7 +12,9 @@ import patterns.factories.Unit;
 import patterns.factories.UnitFactory;
 
 public class DoodlerFactory extends UnitFactory {
-    public DoodlerFactory() { }
+    public DoodlerFactory() {
+
+    }
 
     /*
     * Creates any doodler (determined by the passing parameter) and returns it to the caller

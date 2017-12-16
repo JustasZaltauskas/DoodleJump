@@ -20,7 +20,7 @@ public class GameSkin extends StackPane {
     private final double width = 500;
     private final double height = 800;
 
-    GameSkin() {
+    public GameSkin() {
         root = new Pane();
         grid = new GridPane();
         stack = new StackPane();
@@ -30,15 +30,15 @@ public class GameSkin extends StackPane {
         stack.getChildren().addAll(grid, root);
     }
 
-    Pane getRoot() {
+    public Pane getRoot() {
         return root;
     }
 
-    GridPane getGrid() {
+    public GridPane getGrid() {
         return grid;
     }
 
-    StackPane getStack() {
+    public StackPane getStack() {
         return stack;
     }
 

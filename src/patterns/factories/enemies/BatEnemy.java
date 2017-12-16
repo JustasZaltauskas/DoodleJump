@@ -1,8 +1,8 @@
 /*
- * NormalEnemy class used for Abstract Factory pattern.
- * Description: Normal enemy object that contains predefined data.
+ * BatEnemy class used for Flyweight pattern.
+ * Description: Bat enemy object that contains predefined data.
  *
- * Author: Justas Žaltauskas, Mantvydas Zakarevičius
+ * Author: Justas Žaltauskas
  */
 
 package patterns.factories.enemies;

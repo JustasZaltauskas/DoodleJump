@@ -1,6 +1,6 @@
 /*
 * SpringPlatform class.
-* Description: .
+* Description: Uses Platform interface to add decorator pattern.
 *
 * Author: Mantvydas Zakarevičius
  */
@@ -11,6 +11,7 @@ public class SpringPlatform extends PlatformDecorator {
     private double pushPower = 10.0;
 
     public SpringPlatform() {
+
     }
 
     public double getPushPower() {

@@ -12,12 +12,11 @@ import patterns.state.DoodlerState;
 import patterns.state.LockedState;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-
 public class Doodler extends Unit {
     private DoodlerState doodlerState;
 
     /*
-    * Constructor creates unit out of url (image file)
+    * Constructor creates doodler out of url (image file)
      */
     public Doodler(String url) {
         super(url);
