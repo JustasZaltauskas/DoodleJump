@@ -18,7 +18,6 @@ import java.util.Stack;
 
 public abstract class Unit extends Pane implements Cloneable {
     private Stack<UnitSave> saves = new Stack<>();
-
     private Image image;
     private ImageView imageView;
     private Point2D velocity;
@@ -28,11 +27,12 @@ public abstract class Unit extends Pane implements Cloneable {
     private double velocityY;
     private double velocityGoalX;
     private double velocityGoalY;
+
     public static double dt = 1;
+
     /*
     * Constructor creates unit out of url (image file)
      */
-
     public Unit(String url) {
         setImage(url);
         setImageView(image);
@@ -42,32 +42,13 @@ public abstract class Unit extends Pane implements Cloneable {
     * Abstract unitControl methods
      */
     public abstract void moveX(double value);
-
     public abstract void moveY(double value);
     public abstract boolean isMoving();
     public abstract void moveAlgorithm();
+
     /*
-    * Adds new game unit to the screen (draws object)
+    * Getter methods
      */
-    public void addGameUnit(Pane pane, double x, double y, int velocityX, int velocityY) {
-        setTranslate(x, y);
-        this.velocityX = velocityX;
-        this.velocityY = velocityY;
-        this.velocityGoalX = 0;
-        this.velocityGoalY = 0;
-
-        Rectangle2D viewport = new Rectangle2D(0, 0, image.getWidth(), image.getHeight());
-        getImageView().setViewport(viewport);
-        getImageView().setLayoutX(x);
-        getImageView().setLayoutY(y);
-
-        pane.getChildren().add(getImageView());
-
-        if (isMoving()) {
-            moveAlgorithm();
-        }
-    }
-
     public Image getImage() {
         return image;
     }
@@ -79,6 +60,10 @@ public abstract class Unit extends Pane implements Cloneable {
     public Point2D getVelocity() {
         return velocity;
     }
+
+    /*
+    * Setter methods
+     */
     public void setImage(String imageURL) {
         try {
             this.image = new Image(getClass().getResourceAsStream(imageURL));
@@ -103,29 +88,9 @@ public abstract class Unit extends Pane implements Cloneable {
         this.y = y;
     }
 
-    public Unit makeCopy() {
-        try {
-            return (Unit) this.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-            return this;
-        }
-    }
-
-    public double approach(double goal, double current, double dt) {
-        double diff = goal - current;
-
-        if (diff > dt) {
-            return current + dt;
-        }
-
-        if (diff < -dt) {
-            return current - dt;
-        }
-
-        return goal;
-    }
-
+    /*
+    * Getter and setter methods
+     */
     public double getX() {
         return x;
     }
@@ -174,11 +139,66 @@ public abstract class Unit extends Pane implements Cloneable {
         this.velocityGoalY = velocityGoalY;
     }
 
+    public UnitSave getSave() {
+        return saves.pop();
+    }
+
+    /*
+    * Movement speed calculation
+     */
+    public double approach(double goal, double current, double dt) {
+        double diff = goal - current;
+
+        if (diff > dt) {
+            return current + dt;
+        }
+
+        if (diff < -dt) {
+            return current - dt;
+        }
+
+        return goal;
+    }
+
+    /*
+    * Adds new game unit to the screen (draws object)
+     */
+    public void addGameUnit(Pane pane, double x, double y, int velocityX, int velocityY) {
+        setTranslate(x, y);
+        this.velocityX = velocityX;
+        this.velocityY = velocityY;
+        this.velocityGoalX = 0;
+        this.velocityGoalY = 0;
+
+        Rectangle2D viewport = new Rectangle2D(0, 0, image.getWidth(), image.getHeight());
+        getImageView().setViewport(viewport);
+        getImageView().setLayoutX(x);
+        getImageView().setLayoutY(y);
+
+        pane.getChildren().add(getImageView());
+
+        if (isMoving()) {
+            moveAlgorithm();
+        }
+    }
+
+    /*
+    * Add save using state pattern
+     */
     public void addSave(UnitSave save) {
         saves.push(save);
     }
 
-    public UnitSave getSave() {
-        return saves.pop();
+    /*
+    * Makes copy using prototype pattern
+     */
+    public Unit makeCopy() {
+        try {
+            System.out.println("Prototype pattern has cloned unit!");
+            return (Unit) this.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+            return this;
+        }
     }
 }

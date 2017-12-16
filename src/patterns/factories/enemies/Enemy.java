@@ -32,8 +32,9 @@ public class Enemy extends Unit {
 
     }
 
+    //TODO Enemy movement algorithm
     @Override
     public void moveAlgorithm() {
-        System.out.println("Template method pattern, Enemy");
+        System.out.println("Template Method pattern, Enemy movement algorithm.");
     }
 }

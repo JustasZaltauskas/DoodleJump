@@ -10,7 +10,6 @@ package patterns.factories.doodlers;
 import patterns.factories.Unit;
 import patterns.state.DoodlerState;
 import patterns.state.LockedState;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class Doodler extends Unit {
     private DoodlerState doodlerState;
@@ -41,9 +40,10 @@ public class Doodler extends Unit {
         getImageView().setTranslateY(getY());
     }
 
+    //TODO Doodler movement algorithm
     @Override
     public void moveAlgorithm() {
-        throw new NotImplementedException();
+        System.out.println("Template Method pattern, Doodler movement algorithm.");
     }
 
     public void changeState(DoodlerState doodlerState) {

@@ -32,8 +32,9 @@ public class Platform extends Unit {
 
     }
 
+    //TODO Platform movement algorithm
     @Override
     public void moveAlgorithm() {
-        System.out.println("Template method pattern, Platform");
+        System.out.println("Template Method pattern, Platform movement algorithm.");
     }
 }

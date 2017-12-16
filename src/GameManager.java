@@ -158,11 +158,20 @@ public class GameManager {
         System.out.println("\n----Decorator pattern example:----\n");
 
         // Prototype pattern example
-        System.out.println("----Decorator pattern example:----\n");
+        System.out.println("----Prototype pattern example:----\n");
 
         Unit normalEnemyClone = normalEnemy.makeCopy();
 
-        System.out.println("\n----Decorator pattern example:----\n");
+        System.out.println("\n----Prototype pattern example:----\n");
+
+        // Template Method pattern example
+        System.out.println("----Template Method pattern example:----\n");
+
+        normalEnemy.moveAlgorithm();
+        normalPlatform.moveAlgorithm();
+        normalDoodler.moveAlgorithm();
+
+        System.out.println("\n----Template Method pattern example:----\n");
 
         // State pattern example
         System.out.println("----State pattern example:----\n");
@@ -176,19 +185,18 @@ public class GameManager {
 
         // Memento pattern example
         System.out.println("----Memento pattern example:----\n");
-        
+
         UnitOriginator unitOriginator = new UnitOriginator();
         int[] save = {0, 0};
         unitOriginator.setSave(save);
-        System.out.println("Set save [0, 0]");
+        System.out.println("Set save: [0, 0]");
 
         normalDoodler.addSave(unitOriginator.saveToUnitSaves());
         unitOriginator.restoreUnitSave(normalDoodler.getSave());
         int[] unitSave = unitOriginator.getSave();
-        System.out.println("Restored state: ");
-        System.out.println(Arrays.toString(unitSave));
+        System.out.println("Restored state: " + Arrays.toString(unitSave));
 
-        System.out.println("----Memento pattern example:----\n");
+        System.out.println("\n----Memento pattern example:----\n");
 
         AnimationTimer timer = new AnimationTimer() {
             //TODO Creates and starts animation timer
